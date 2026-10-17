@@ -10,7 +10,8 @@ description: "Master command for understanding a codebase: onboarding into an un
 Follow these phases in order. Do not skip the brief.
 
 ### Phase 0: Look before asking
-Scan what is already known: the user's message, open files, the repo (stack, configs, README, DESIGN.md, brand files, tests, git state), and memory. Any intake question already answered here is skipped. Tell the user in one line what you detected ("Detected: Next.js + Tailwind, existing site, no brand kit").
+Scan what is already known: the user's message, open files, the repo (stack, configs, README, DESIGN.md, brand files, tests, git state), and memory. Any intake question already answered here is skipped.
+If `<project>/.claude/project-brief.md` exists, read it first and treat its answers as given. If it starts with `Run by: /app-master`, this master is one stage of a bigger build: ask only questions the brief does not cover, use its Visuals and Teamwork answers, present your Phase 4 brief as that stage's checkpoint (one approval, not two), and update the brief's Stages table when done. Tell the user in one line what you detected ("Detected: Next.js + Tailwind, existing site, no brand kit").
 
 ### Phase 1: Intake interview
 - Ask the questions under **Intake** below, one round at a time.
