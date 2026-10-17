@@ -1,6 +1,6 @@
 # Master commands for Claude Code
 
-15 commands that interview you (multiple-choice), show a brief, wait for your "go", then run the right skills together and report back with visuals.
+16 commands that interview you (multiple-choice), show a brief, wait for your "go", then run the right skills together and report back with visuals.
 
 ## Before you install
 
@@ -39,7 +39,7 @@ Restart Claude Code afterwards.
 
 ## Use
 
-To build a whole app from scratch, run `/masters:app-master` and answer one interview; it runs the other masters for you, pausing after each stage.
+To build a whole app from scratch, run `/masters:app-master`. To put an existing app through everything, run `/masters:audit-master`. Both ask one interview, then run the other masters for you, pausing after each stage.
 
 Or type any single master, optionally followed by what you want:
 
@@ -66,6 +66,7 @@ A master never pushes, publishes, deletes, posts or pays without a fresh yes at 
 | Command | What it does |
 |---|---|
 | `/masters:app-master` | **Start here for something new**: one interview, then it runs the research, plan, visuals, UI, build, test, security, ops, docs and release masters, with a checkpoint after each stage |
+| `/masters:audit-master` | **Start here for an existing app**: maps it, runs and extends its tests, break-it testing, security, UI and production-readiness reviews, then one ranked fix list you pick from; each fix verified |
 | `/masters:ui-master` | Design, redesign, polish or review any interface |
 | `/masters:visuals-master` | Brand kits, mockup images, posters, image-to-code |
 | `/masters:plan-master` | Idea → plan → build, branches, PRs, handoffs |
