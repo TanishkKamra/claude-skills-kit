@@ -1,0 +1,9 @@
+{
+  "name": "masters",
+  "version": "2026.10.17.0604",
+  "description": "14 master commands that interview you, show a brief, then run the right skills together (UI, visuals, planning, debugging, review + security, codemap, refactor, release, ops, style, docs, research, builder, memory).",
+  "author": {
+    "name": "TanishkKamra"
+  },
+  "license": "MIT"
+}

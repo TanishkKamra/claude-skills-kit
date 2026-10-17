@@ -1,0 +1,15 @@
+{
+  "name": "claude-skills-kit",
+  "owner": {
+    "name": "TanishkKamra"
+  },
+  "description": "Master commands that interview you, then orchestrate the right Claude Code skills.",
+  "plugins": [
+    {
+      "name": "masters",
+      "source": "./plugins/masters",
+      "version": "2026.10.17.0604",
+      "description": "14 interviewing master commands for Claude Code"
+    }
+  ]
+}

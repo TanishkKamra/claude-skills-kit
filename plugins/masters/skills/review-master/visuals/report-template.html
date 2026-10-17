@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>review-master · {{TASK}}</title>
+<!--
+  VISUAL REPORT PAGE for /review-master.
+  How to fill (for Claude):
+  - Copy this file to <project>/.claude/master-runs/<YYYY-MM-DD>-review-master-<short-task>.html
+  - Replace {{TASK}}, {{DATE}}, {{STATUS}}. Fill sections in order; append, never delete earlier content.
+  - Use only the components below (copy a <template> block's inner HTML). Real data only; label sketches.
+  - Every figure gets a <p class=takeaway> title stating the point, and a <p class=alt> one-line text version.
+  - Inline SVG is fine for diagrams. No external scripts, fonts or images except local screenshot files.
+-->
+<style>
+:root{--c:#E65100;--tint:color-mix(in srgb,var(--c) 9%,#fff);--tint2:color-mix(in srgb,var(--c) 20%,#fff);
+--ink:#1B1D22;--soft:#4A4F5A;--mute:#7A808C;--line:#E4E1DA;--warm:#F7F5F0;--ok:#2E7D32;--bad:#C62828;--warn:#B26A00}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font:15px/1.5 "Segoe UI",system-ui,-apple-system,sans-serif;color:var(--ink);background:#fff}
+main{max-width:1080px;margin:0 auto;padding:0 24px 64px}
+code,.mono{font-family:"Cascadia Mono",Consolas,ui-monospace,monospace;font-size:.9em}
+header{background:var(--c);color:#fff;padding:28px 24px 22px;margin-bottom:28px}
+header .in{max-width:1080px;margin:0 auto;display:flex;justify-content:space-between;gap:16px;align-items:flex-end;flex-wrap:wrap}
+header .cmd{font-family:"Cascadia Mono",Consolas,monospace;font-weight:700;background:rgba(255,255,255,.18);padding:2px 10px;border-radius:6px}
+header h1{font-size:28px;line-height:1.15;margin:8px 0 4px}
+header .meta{opacity:.85;font-size:13px}
+.status{background:#fff;color:var(--c);font-weight:700;border-radius:20px;padding:4px 14px;font-size:13px}
+nav{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
+nav a{color:var(--c);background:var(--tint);border-radius:20px;padding:4px 14px;text-decoration:none;font-weight:600;font-size:13px}
+section{margin:36px 0}
+h2{font-size:21px;display:flex;align-items:center;gap:10px;margin-bottom:12px}
+h2:before{content:"";width:12px;height:12px;border-radius:3px;background:var(--c)}
+.takeaway{font-weight:700;font-size:16px;margin:18px 0 8px}
+.alt{color:var(--mute);font-size:13px;margin-top:6px}
+.fig{border:1px solid var(--line);border-radius:10px;padding:16px;background:#fff}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+/* flow / steps */
+.flow{display:flex;gap:8px;flex-wrap:wrap;align-items:stretch}
+.step{flex:1;min-width:140px;background:var(--warm);border-radius:8px;padding:10px 12px;border:1px solid transparent}
+.step b{display:block}.step.hot{background:var(--tint);border-color:var(--tint2)}.step.hot b{color:var(--c)}
+.step small{color:var(--soft)}
+/* before / after */
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.ba figure{border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.ba figcaption{font-weight:700;font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding:6px 10px;background:var(--warm)}
+.ba figure.after figcaption{background:var(--tint);color:var(--c)}
+.ba img{display:block;width:100%}
+/* bars (diff per file, metrics) */
+.bars .row{display:grid;grid-template-columns:minmax(140px,30%) 1fr 70px;gap:10px;align-items:center;padding:4px 0}
+.bars .track{height:12px;background:var(--warm);border-radius:6px;display:flex;overflow:hidden}
+.bars .add{background:var(--ok)}.bars .del{background:var(--bad)}.bars .val{background:var(--c)}
+.bars .num{font-size:12px;color:var(--soft);text-align:right}
+/* option cards (decisions) */
+.card{border:1.5px solid var(--line);border-radius:10px;padding:14px}
+.card.pick{border-color:var(--c);background:var(--tint)}
+.card h3{font-size:16px;margin-bottom:6px}.card .badge{float:right;font-size:12px;font-weight:700;color:var(--c)}
+/* score / findings table */
+table{border-collapse:collapse;width:100%;font-size:14px}
+th{text-align:left;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--mute);border-bottom:2px solid var(--c);padding:6px 8px}
+td{border-bottom:1px solid var(--line);padding:6px 8px;vertical-align:top}
+.sev{font-weight:700;border-radius:4px;padding:1px 8px;font-size:12px;color:#fff}
+.sev.b{background:var(--bad)}.sev.m{background:var(--warn)}.sev.n{background:var(--mute)}.sev.ok{background:var(--ok)}
+/* heatmap */
+.heat{display:grid;gap:3px;font-size:12px}
+.heat .h{color:var(--mute);font-weight:700}
+.heat .cell{border-radius:4px;text-align:center;padding:4px 0;color:#fff;font-weight:700}
+/* timeline */
+.tl{border-left:3px solid var(--tint2);margin-left:6px;padding-left:16px}
+.tl .ev{position:relative;margin:0 0 12px}.tl .ev:before{content:"";position:absolute;left:-23px;top:5px;width:11px;height:11px;border-radius:50%;background:var(--c)}
+.tl .when{font-size:12px;color:var(--mute)}
+/* swatches */
+.sw{display:flex;gap:10px;flex-wrap:wrap}.sw div{width:96px}.sw i{display:block;height:56px;border-radius:8px;border:1px solid var(--line)}
+.sw span{font-size:12px;font-family:Consolas,monospace}
+/* live board */
+.board{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.board .col{background:var(--warm);border-radius:8px;padding:10px}.board .col h4{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);margin-bottom:8px}
+.board .t{background:#fff;border-radius:6px;padding:6px 8px;margin-bottom:6px;font-size:13px;display:flex;gap:8px;align-items:center}.board .t:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--line);flex:none}
+.board .run .t:before{background:var(--c)}.board .done .t{color:var(--soft)}.board .done .t:before{background:var(--ok)}
+.sketch{display:inline-block;font-size:11px;font-weight:700;color:var(--warn);border:1px dashed var(--warn);border-radius:4px;padding:0 6px;margin-left:6px}
+@media (max-width:640px){.ba{grid-template-columns:1fr}.board{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><div class="in"><div><span class="cmd">/review-master</span><h1>{{TASK}}</h1><div class="meta">{{DATE}} · teamwork: {{MODE}}</div></div><span class="status">{{STATUS}}</span></div></header>
+<main>
+<nav><a href="#brief">Brief</a><a href="#decisions">Decisions</a><a href="#report">Report</a><a href="#live">Live board</a></nav>
+
+<section id="brief"><h2>Brief</h2>
+  <!-- goal, defaults, plan; then the master's Brief visuals -->
+</section>
+
+<section id="decisions"><h2>Decisions</h2>
+  <!-- one block per decision: options side by side, judge scores, what was picked and why -->
+</section>
+
+<section id="report"><h2>Report</h2>
+  <!-- before/after, diff map, charts, findings; then "Not verified" -->
+</section>
+
+<section id="live"><h2>Live board</h2>
+  <!-- only if the user opted in; replace the board after each step -->
+</section>
+</main>
+
+<!-- ===== COMPONENTS: copy the inside of a template into a section ===== -->
+<template id="c-flow"><p class="takeaway">TAKEAWAY</p><div class="fig flow">
+  <div class="step"><b>Step</b><small>detail</small></div><div class="step hot"><b>Changed step</b><small>detail</small></div></div><p class="alt">TEXT VERSION</p></template>
+<template id="c-before-after"><p class="takeaway">TAKEAWAY</p><div class="ba">
+  <figure><figcaption>Before</figcaption><img src="before.png" alt="before"></figure>
+  <figure class="after"><figcaption>After</figcaption><img src="after.png" alt="after"></figure></div><p class="alt">TEXT VERSION</p></template>
+<template id="c-diff-bars"><p class="takeaway">TAKEAWAY</p><div class="fig bars">
+  <div class="row"><code>src/file.ts</code><div class="track"><i class="add" style="width:40%"></i><i class="del" style="width:10%"></i></div><span class="num">+40 −10</span></div></div><p class="alt">TEXT VERSION</p></template>
+<template id="c-options"><p class="takeaway">TAKEAWAY</p><div class="grid3">
+  <div class="card pick"><span class="badge">PICKED · 8.5</span><h3>Option A</h3><p>why</p></div>
+  <div class="card"><span class="badge">7.0</span><h3>Option B</h3><p>why</p></div></div><p class="alt">TEXT VERSION</p></template>
+<template id="c-table"><p class="takeaway">TAKEAWAY</p><div class="fig"><table>
+  <tr><th>#</th><th>Severity</th><th>Where</th><th>What</th></tr>
+  <tr><td>1</td><td><span class="sev b">Blocker</span></td><td><code>file:12</code></td><td>problem</td></tr></table></div><p class="alt">TEXT VERSION</p></template>
+<template id="c-heatmap"><p class="takeaway">TAKEAWAY</p><div class="fig heat" style="grid-template-columns:160px repeat(3,1fr)">
+  <span class="h"></span><span class="h">Blocker</span><span class="h">Major</span><span class="h">Minor</span>
+  <code>src/a.ts</code><span class="cell" style="background:var(--bad)">2</span><span class="cell" style="background:var(--tint2);color:var(--ink)">0</span><span class="cell" style="background:var(--c)">3</span></div><p class="alt">TEXT VERSION</p></template>
+<template id="c-timeline"><p class="takeaway">TAKEAWAY</p><div class="fig tl">
+  <div class="ev"><div class="when">date</div><b>event</b></div></div><p class="alt">TEXT VERSION</p></template>
+<template id="c-swatches"><p class="takeaway">TAKEAWAY</p><div class="fig sw">
+  <div><i style="background:#123456"></i><span>#123456 · role</span></div></div><p class="alt">TEXT VERSION</p></template>
+<template id="c-board"><div class="board">
+  <div class="col done"><h4>Done</h4><div class="t">step</div></div>
+  <div class="col run"><h4>Running</h4><div class="t">step</div></div>
+  <div class="col"><h4>Next</h4><div class="t">step</div></div></div></template>
+<template id="c-diagram"><p class="takeaway">TAKEAWAY</p><div class="fig"><!-- inline <svg> diagram: boxes = modules, arrows = calls; master color for changed parts --></div><p class="alt">TEXT VERSION</p></template>
+</body>
+</html>
