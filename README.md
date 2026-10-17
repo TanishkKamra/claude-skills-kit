@@ -4,13 +4,7 @@
 
 ## Before you install
 
-- [Claude Code](https://code.claude.com) installed.
-- Access to this repo: it is private, so the owner must add you as a collaborator.
-- Logged in to GitHub on your machine, so Claude Code can fetch a private repo:
-
-  ```bash
-  gh auth login
-  ```
+- [Claude Code](https://code.claude.com) installed. That's it: the repo is public, so no GitHub login or invite is needed.
 
 ## Install
 
@@ -113,6 +107,6 @@ Then restart Claude Code. This repo is updated automatically when the masters ch
 
 ## Troubleshooting
 
-- **"Repository not found" when adding the marketplace**: you don't have access yet, or you aren't logged in. Ask the owner for access, then run `gh auth login`.
+- **"Repository not found" when adding the marketplace**: check the spelling `TanishkKamra/claude-skills-kit` and your internet connection, then update Claude Code (`claude update`).
 - **Command not found**: plugin commands are namespaced; type `/masters:` and pick from the list. Restart Claude Code after installing.
 - **A master says a child skill is missing**: run the install line it shows, restart, and run the master again. Or answer "continue" to let it use the closest alternative.
