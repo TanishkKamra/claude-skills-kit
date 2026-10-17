@@ -5,79 +5,112 @@ description: "Master command for brand kits, generated web or mobile mockup imag
 
 # Visuals Master
 
-## How this master runs
+## Start here: four hard gates (every run, every effort level, even for "small" tasks)
+1. **First action:** create the run folder and `PROGRESS.md` (Quick: `RUN.md`) containing the Run sequence checklist below. If the run folder cannot be written (permission denied, read-only), keep the same sections in your replies instead and carry on; never stop the task over this.
+2. **No project file is edited** until `SPEC.md` (Quick: the Spec section of `RUN.md`) exists with Done-when criteria.
+3. **No final message** until `EVIDENCE.md` (Quick: `RUN.md`) holds a `VERDICT:` line: Deep/Max from a verifier subagent you started with the Agent tool; Quick from your self-check.
+4. **The final message starts with** `Run folder: <path>` and the checklist `0 ✓ 1 ✓ … 8 ✓`, every phase ticked or marked `skipped: <reason>`. Never tick a phase you did not do.
+A task feeling small is not a reason to skip a gate; Quick effort is the light path, and it still passes all four.
 
-Follow these phases in order. Do not skip the brief.
+## Ground rules (these hold for the whole run, every phase)
+1. **Done means proven.** Before building, write testable acceptance criteria ("Done when") into `SPEC.md`, each naming the command, file, screenshot or page that proves it and the expected result. Never report a criterion as done without its evidence in `EVIDENCE.md`. A check that did not run, or only checked syntax, does not count.
+2. **Read before you claim.** Never state anything about code, files, data or a page you have not opened in this run. Cite `file:line`, a URL or a command output for every factual claim.
+3. **Current docs over memory.** Before using any library, framework, CLI, API or file format you did not just read in this project, check its exact version (lockfile, `--version`) and read current docs (context7, vendor docs, changelog). If docs are unreachable, mark it "from memory, unverified".
+4. **Ask only what changes the outcome.** Skip every question that Recon or the user's message already answered. Ask only what changes the plan and cannot be found. Every assumption goes into `SPEC.md` under Assumptions and into the report.
+5. **No go, no build.** Before the user approves the brief you may only read, run read-only commands (run the failing command, tests, logs, `git log`/`blame`) and write files inside the run folder. The brief lists every risky command the plan needs (for example `npm install x`); the go covers exactly those. After go, keep working through every step without stopping, except for a blocker or a risky action not covered by the go.
+6. **Fresh yes for risky actions.** Ask, naming the exact command, before: push, publish, merge, deploy, send, post, pay; any destructive git command (reset, clean, force, branch -D); deleting or overwriting files the user wrote; DB migrations or data writes outside local dev; installing, upgrading or removing dependencies; anything against a non-local host; anything with metered cost (paid APIs, image generation, extra agents beyond the chosen effort).
+7. **Never weaken the bar to pass it.** Do not edit, skip or special-case tests or criteria to turn them green. If a test or criterion looks wrong, stop and tell the user why.
+8. **Stay in scope.** Change only what the criteria require. Put other improvements in the report as suggestions.
+9. **Independent check before you report (Deep and Max).** A fresh subagent that did not do the work verifies against `SPEC.md` (Phase 7, `reference/verify.md`). Up to 3 fix rounds. **The run is not finished until `EVIDENCE.md` contains the verifier's `VERDICT:` line, and the report quotes it.** Quick replaces this with the self-check in Phase 7.
+10. **State lives in files.** `SPEC.md` and `PROGRESS.md` start with the Run settings line (`effort= teamwork= visuals= live board= change level=`). Keep `PROGRESS.md` current after every step. If you lose track (long run, compacted context), re-read `PROGRESS.md`, `SPEC.md` and `EVIDENCE.md` before doing anything else.
 
-### Phase 0: Look before asking
-Scan what is already known: the user's message, open files, the repo (stack, configs, README, DESIGN.md, brand files, tests, git state), and memory. Any intake question already answered here is skipped.
-If `<project>/.claude/project-brief.md` exists, read it first and treat its answers as given. If it starts with `Run by:` (for example `/app-master` or `/audit-master`), this master is one stage of a bigger run: ask only questions the brief does not cover, use its Visuals and Teamwork answers, present your Phase 4 brief as that stage's checkpoint (one approval, not two), and update the brief's Stages table when done. If the brief says `Mode: report only`, change no code: append every finding to the brief's Findings table (severity, effort, area, file:line, finding, suggested fix) and hand back. Tell the user in one line what you detected ("Detected: Next.js + Tailwind, existing site, no brand kit").
+**Run folder:** `<project>/.master-runs/<YYYY-MM-DD>-<master>-<short-task>/` holds `CONTEXT.md`, `SPEC.md`, `PROGRESS.md`, `EVIDENCE.md` and `report.html` (Quick: one `RUN.md` with SPEC, PROGRESS and EVIDENCE sections). If `.git` exists, add `.master-runs/` to `.git/info/exclude` so it is never committed. With no project folder (claude.ai), keep the same sections in the chat or an Artifact.
 
-### Phase 1: Intake interview
-- Ask the questions under **Intake** below, one round at a time.
-- In Claude Code, use the AskUserQuestion tool: at most 4 questions per round, 2 to 4 options each. Put the option you would recommend first and add "(Recommended)" to its label. The user can always type their own answer.
-- Without that tool (claude.ai, other clients), ask the round in chat as a numbered list with lettered options, and wait for the reply.
-- Skip questions that Phase 0 or an earlier answer already settled. Add a question whenever an answer opens a decision that is the user's to judge. Asking more is better than guessing.
-- Treat links and file paths in free-text answers as references to read.
-- Unanswered or "you decide" questions get a sensible default. List every default in the brief.
+**Staged runs:** if `<project>/.master-runs/project-brief.md` exists, read `reference/orchestration.md` before anything else and follow its stage rules.
 
-### Phase 1b: Visuals (always ask, just before teamwork mode)
-Ask: "How much visual aid do you want?"
-- **Full (Recommended)**: a picture at the brief, at every decision, and in the report.
-- **Key moments only**: the brief and the report.
-- **Text only**: no visuals.
+## Run sequence
+Copy this checklist into `PROGRESS.md` and tick it as you go. Each phase opens its reference file first.
 
-If the answer is Full or Key moments, also ask: "Show a live progress board while I work? It redraws after every step, so it costs extra tokens (roughly 10 to 25% more on long runs)." Options: **No (Recommended)** · **Yes**.
+| # | Phase | Read first | Gate: do not move on until |
+|---|---|---|---|
+| 0 | Recon | `reference/recon.md` | `CONTEXT.md` written; a "Detected:" block shown |
+| 1 | Interview | this file | Effort chosen first; every outcome-changing question answered or defaulted |
+| 2 | Research | `reference/playbook.md` (if present), `reference/recon.md` §4 and `reference/sources.md` | every library/API the plan uses has a doc source and version in `CONTEXT.md` |
+| 3 | Spec | `reference/spec.md` | `SPEC.md` has goal, non-goals, Done-when with proofs, assumptions, risks |
+| 4 | Brief | this file | the user said go (one approval) |
+| 5 | Baseline | `reference/verify.md` | baseline recorded in `EVIDENCE.md`; a checkpoint to roll back to exists |
+| 6 | Build | master sections below | every step's check passed and logged; `PROGRESS.md` current |
+| 7 | Verify | `reference/verify.md` | every criterion has evidence or is NOT VERIFIED; Quick: self-check done; Deep/Max: verifier `VERDICT:` recorded |
+| 8 | Report | Output section below | evidence per criterion, assumptions, Not verified, one next step |
 
-### Phase 2: Teamwork mode (always ask, as the last intake question)
-Ask: "How should the skills work together on this?" with these options, explained in plain words:
-- **Solo (quick)**: one skill, picked as the best fit, does the whole job. Fastest and cheapest. Good for small or clear tasks.
-- **Relay**: the chosen skills take turns in one line, each handing its result to the next (for example: research, then design, then review). Medium cost. Good for most tasks.
-- **Panel + judge**: 2 to 4 skills each work out their own approach at the same time (as separate agents). A judge compares them side by side, picks the best or merges the best parts, and explains why. Then one builder carries it out. Highest quality, about 2 to 4 times the cost. Good for big, high-stakes or taste-driven work.
+Failures (tool missing, app will not start, tests absent, network down): follow `reference/failures.md`. Token budget (usage limits, model per subagent, pausing safely): follow `reference/budget.md` from Phase 1 onwards.
 
-### Phase 3: Research (only if the user asked for it, or the task needs facts you do not have)
-Search trusted, current sources. Collect findings with links. For taste-driven work, gather 5 to 8 concrete references and say what each one is for.
+## Effort levels
+| | Quick | Deep | Max |
+|---|---|---|---|
+| Recon | `recon.md` items 1, 2, 4, 7, 8 only | full checklist; explorers for large repos | full checklist + explorers |
+| Interview | Effort + at most ONE round of the master's questions; no Change level when the user said "fix only X" | Effort, then the needed rounds | same as Deep |
+| Research (Phase 2) | only if the fix relies on behaviour not already seen working here | always for libraries/APIs used | always, plus 2 alternative sources |
+| Spec | 2 to 4 criteria, one `Risk:` line | 4 to 8 criteria + pre-mortem | as many as needed + red-team criterion |
+| Brief | text only | with the Brief visual; critic subagent first | same as Deep |
+| Baseline | tests covering the touched area; checkpoint = `git rev-parse HEAD` if the tree is clean | full suite; own branch | full suite; own branch |
+| Verify | self-check: rerun every proof, re-read the diff once against SPEC | independent verifier, up to 3 fix rounds | verifier + red team (2 fix rounds) + second verifier for taste criteria or after a red-team fix |
+| Approaches | one | one | two competing approaches, each by its own read-only subagent, judged against SPEC before building (even if Teamwork is not Panel) |
+| Visuals | Text only | as chosen | as chosen |
+| Cost | 1× | about 2 to 3× | about 5 to 10× (state the estimate in the brief) |
 
-### Phase 4: Brief, then wait
-Show a one-screen brief:
-1. Goal, audience, scope, constraints (from the answers)
-2. Defaults you chose for skipped questions
-3. Research findings and references (with links), if any
-4. Child skills picked, their order, and the teamwork mode
-5. Plan: numbered steps, what will be created or changed, how it will be verified
-Then ask for "go" or changes. Do not build anything before the user says go.
+## Phase 0: Recon
+Read `reference/recon.md` and work through its checklist (Quick: the reduced list above) before asking anything. Then show one "Detected:" block: what this is, stack and versions, what exists, what is missing, repo state (git or not, dirty or clean), what could not be checked.
 
-### Phase 5: Run the child skills
-- **Using a child skill:** if it is installed (it appears in your skill or command list, possibly with a plugin prefix such as `plugin:name`), invoke it with the Skill tool so the newest version is used. Otherwise read the bundled copy at `children/<name>/CHILD.md` inside this skill's folder and follow it; its helper files sit next to it. Children marked "safe copy" below are always run from the bundled copy, and every child listed under **Safety overrides** follows that rule however it was installed. If a child is neither installed nor bundled, show its install line from **Where child skills come from** and ask whether to continue without it. If a child needs a tool or account that is missing, say so in one line and use the closest alternative.
-- **Bundled agent prompts:** some children carry `agents/*.md`. To use one, start a subagent (general-purpose) whose prompt is that file's body plus the task.
-- **Solo:** run the single best child skill.
-- **Relay:** run the children in the order from the brief. Pass each one a short summary of the brief plus the previous step's output.
-- **Panel + judge:** start one agent per panel skill in parallel. Each gets the full brief and the instruction to propose (not build) an approach in under 400 words. Then judge: score each proposal against the user's answers (fit to goal, fit to stated taste or references, risk, effort), show the scores in a small table, and pick or merge. If the call is close or taste-driven, ask the user to pick. Then build with the winning approach.
-- Whenever a new decision comes up that is the user's to judge, stop and ask it. Never take irreversible or outward-facing steps (push, publish, delete, post, send, pay) without an explicit yes at that moment.
+## Phase 1: Interview
+- **Round 1 always starts with Effort** (Quick · Deep · Max, with the costs from the table). Mark one "(Recommended)" by task size from Recon and say why in one line: **Quick** when the task is small and clear (one or two files, a known cause or an exact request, low risk); **Deep** for normal work; **Max** when it is risky (security, data, money, production, public release), cross-cutting or multi-day. The user can pick any level. Ask it together with the master's most important question. At Deep and Max also ask **Teamwork** (Solo: one best-fit skill · Relay: skills take turns, each handing its result to the next · Panel + judge: 2 to 3 skills propose, a judge scores them against the spec, one builds the winner; default Deep → Relay, Max → Panel) and **Visuals** (Key moments (Recommended) · Full · Text only; then offer a live progress board, warning it costs about 10 to 25% more tokens, default No). Quick: Solo and Text only, do not ask.
+- **Change level** (not at Quick when the user asked for a specific fix; never inside a staged run): when the target already exists (repo, UI, document, brand, plan), ask "How much should change?" with *Keep as is: fix only what I asked* · *Light touch* · *Significant rework* · *Full rebuild*. Then for every existing decision the plan would alter (stack, structure, layout, naming, design direction, data model, wording), ask one question showing **current → proposed** with *Keep current* / *Change* / *Change differently (I'll say)*, 4 per round. The user stays in control of every change to what exists.
+- **Scope and repo state:** confirm what is in and out ("Detected X; I'll cover A and B, not C. Right?"). If the git tree is dirty, ask now: stash, commit, or new branch. If there is no git, say the checkpoint will be a backup copy in the run folder.
+- **The master's own Intake:** ask only what is still open. Mark detected answers "(detected)" in the brief so the user can overrule them.
+- Use AskUserQuestion where available: up to 4 questions per round, 2 to 4 options, recommended option first with "(Recommended)". Elsewhere ask in chat as a numbered list with lettered options and wait. Links and paths in answers are references to read. "You decide" gets a default, logged under Assumptions.
 
-### Phase 6: Verify
-Check the result against the brief with real evidence (run it, test it, screenshot it, re-read it). Fix what fails. Anything that could not be checked goes under "Not verified".
+## Phase 2: Research
+If `reference/playbook.md` exists, read it first: its routing, child patches and required sources apply to the whole run. Follow `reference/recon.md` section 4 for every library, API and format the plan uses (see Effort levels for how much). Use only sources that pass `reference/sources.md`: Tier 1 first, Tier 2 only cross-checked, and note the tier of each source. When the user asks to replicate, duplicate or rebuild something, follow the rules at the end of `sources.md`.
 
-### Phase 7: Report
-Use the **Output** template below. Keep it short. End with at most one suggested next step.
+## Phase 3: Spec
+Write `SPEC.md` per `reference/spec.md`, then go straight to the brief.
 
-## How visuals work (unless the user chose Text only)
-Each master lists its own visuals under **Visual aids** further down. Show them at these moments:
-- **Brief** (Phase 4): a picture of what will change before the user says go: files or areas touched, the flow, a before/after sketch.
-- **Decisions** (Phase 5, Full only): whenever the user must pick, show the options side by side (directions, approaches, panel proposals with the judge's scores).
-- **Report** (Phase 7): proof of what changed: before/after screenshots, a diff map, charts of test or metric results.
-- **Live board** (only if the user said yes): a compact board of steps (done, running, next) redrawn after each step.
+## Phase 4: Brief, then wait
+Show one screen:
+1. Goal, scope, non-goals, change level
+2. **Done when**: the criteria from `SPEC.md`, each with its proof
+3. Detected facts and defaults taken (overridable)
+4. Research findings and doc sources, if any
+5. Child skills and their order (teamwork and effort already chosen); a token-cost range per `reference/budget.md`
+6. Plan: numbered steps, files or artifacts touched, top risks, and every risky command the plan needs
+7. The Brief visual from **Visual aids** (not at Quick or Text only)
+At Deep and Max, first send `SPEC.md` and the plan to a fresh critic subagent (prompt in `reference/verify.md`) and fix what it finds. Then ask for **go** or changes. Changing a Done-when criterion after go needs the user's yes.
 
-**Show each visual in two places:**
-1. **Inline in the chat.** Use the best tool this client offers, in this order: an inline visual/widget tool (for example `show_widget`; load its guide first if it has one) → an Artifact → a Mermaid diagram or a small Markdown table in the reply.
-2. **One visual report page per run.** Copy `visuals/report-template.html` from this skill's folder to `<project>/.claude/master-runs/<YYYY-MM-DD>-<master>-<short-task>.html`, fill its sections as the run goes (brief, decisions, report), and keep appending. Open it for the user (browser pane, Artifact, or give the path). On claude.ai, publish it as an Artifact instead of a file. Never commit this folder unless the user asks.
+## Phase 5: Baseline
+Follow `reference/verify.md` Baseline. Questions about repo state were settled in Phase 1; do not ask again.
 
-**Rules for every visual:**
-- Real data only: numbers, files and screenshots come from the repo, the diff, test output or the browser. Anything illustrative is labelled "sketch".
-- The title states the takeaway ("3 files change, no public API touched"), so it reads in 5 seconds.
-- Use this master's color for emphasis, gray for everything else, red only for problems and green only for passes.
-- Every visual has a text equivalent next to it (one line), so nothing is lost in a text-only client.
-- Screenshots: take them with the browser tools at desktop (1440px) and mobile (390px) widths when the work touches a UI.
+## Phase 6: Build
+- **Using a child skill:** if it is installed (in your skill or command list, possibly with a plugin prefix), invoke it with the Skill tool. Otherwise read the bundled copy at `children/<name>/CHILD.md` and follow it. If it is neither, show its install line from **Where child skills come from** and ask whether to continue without it. Masters that have a **Safety overrides** section apply it to those children however they were installed.
+- **Bundled agent prompts:** for `children/<name>/agents/*.md`, start a general-purpose subagent with that file's body plus the task.
+- **Every delegation** states the goal, the exact files or sources in scope, what to return (under 300 words, with `file:line` or URL evidence) and what not to touch.
+- **Solo / Relay:** one step at a time in the brief's order. After each step run its check and append the result to `EVIDENCE.md`. Commit only on the run's own branch (created in Phase 5); with no run branch, leave changes in the working tree.
+- **Panel + judge** (and Max's two approaches): proposers are read-only, under 400 words each. The judge scores each against the Done-when criteria (criteria fit 40%, risk 25%, effort 20%, fit to the user's stated taste 15%) and shows the table. A gap under 10 points, or a taste call, goes to the user. One builder executes the winner.
+- **Retries:** one retry per failing step, then change approach (write what you learned in `PROGRESS.md` first). If the second approach also fails, report it as a blocker with the evidence.
+- A new decision that is the user's to judge: stop and ask it.
+
+## Phase 7: Verify
+Rerun every Done-when proof yourself and record the output. Then: Quick → re-read your diff once against `SPEC.md` (self-check). Deep → spawn the independent verifier per `reference/verify.md` and loop up to 3 fix rounds. Max → verifier, then red team, then a second verifier where the table says so. Record each `VERDICT:` line in `EVIDENCE.md`.
+
+## Phase 8: Report
+Use the **Output** template below, then always add:
+- **Evidence**: each Done-when criterion → PASS / FAIL / NOT VERIFIED, with the command or artifact and its key output line
+- **Verifier**: the `VERDICT:` line (Deep/Max) or "self-check" (Quick)
+- **Assumptions** made, and how to reverse each
+- **Not verified**: anything unchecked and why
+- **One next step**
+
+## Visuals
+Unless Text only, show the visuals listed under **Visual aids** following `reference/visuals.md`: inline in the chat and on the run's `report.html` (from `visuals/report-template.html`). Real data only; label anything illustrative "sketch".
 
 ## Intake
 
@@ -95,11 +128,29 @@ Each master lists its own visuals under **Visual aids** further down. Show them 
 
 **Round 3: inputs**
 9. `References` | Inspiration? | I have links / screenshots · Research online and build a mood board · Competitors (I'll name them) · None
-10. `Assets` | Existing assets? | Full kit · Logo only · Nothing, create from scratch · A screenshot / mockup to convert (I'll attach it)
+10. `Assets` | Existing assets? *(detect)* | Full kit · Logo only · Nothing, create from scratch · A screenshot / mockup to convert (I'll attach it)
 11. `Platform` | Target? | Desktop web · Mobile app (iOS / Android) · Both · Print / poster / social sizes
 12. `Fidelity` | How far should it go? | Images only · Images + tokens / spec · Images + coded build · Code only, from my image
 
-Then ask Teamwork mode (see protocol).
+Effort comes first and Change level follows the protocol (Phase 1). Skip any question Recon or the user's message already answered; *(detect)* marks the ones most likely to be found automatically. At Quick, ask at most one round of these questions and default the rest.
+
+## Quality bar
+**Must do**
+- Write a one-line brand brief first: audience, 3 personality adjectives, anti-references.
+- Tokens before images: 1 primary, 1 accent, neutrals, at most 2 font families, a type scale.
+- Check which image-generation capability is installed. If none, say so and offer HTML/SVG mockups rendered in the browser.
+- Give generated images an explicit aspect ratio and keep exact text out of them; overlay real text in code or layout.
+- Open every generated image and check every label and detail; never assume it rendered right.
+- First pass: at most 3 variants; ask before generating more (metered cost).
+- Image to code: extract tokens (colors, sizes, spacing) first, build, render at the source size, compare side by side, and fix any deviation over 4 px or off-palette.
+- Record source and license of every asset; never imitate an existing mark.
+
+**Guards**: garbled text in images → overlay real text · palette drift between assets → one token file as the source · pixel guessing → measure and extract · logo unusable small → test at 16 and 32 px.
+
+**Gates**: contrast table for every color pair · logo test sheet (light, dark, one-color, 16/32 px) · image-to-code side-by-side with remaining deviations listed.
+
+## Expert playbook
+Read `reference/playbook.md` before Phase 2 and before delegating to any child. It holds tool routing, patches to apply on top of each child, method additions, gate additions and the sources to require. On any conflict the playbook beats the child; copy its gate additions into SPEC.md Done-when.
 
 ## Child skills and routing
 | Child | Use when |
@@ -108,7 +159,7 @@ Then ask Teamwork mode (see protocol).
 | imagegen-frontend-web | Web mockups. |
 | imagegen-frontend-mobile | Mobile mockups. |
 | canvas-design | Posters, one-page visuals, art, PNG / PDF pieces, print or social sizes. |
-| image-to-code | Converting a provided or generated image into code. Always last in a chain. |
+| image-to-code | Converting a provided image, or a comp imagegen made, into code. Skip its own generation steps when the image already exists. Always last in a chain. |
 
 Rules: brandkit before image generation when no brand exists. Purpose = Build target: after approval, offer to hand off to /ui-master with the chosen direction.
 
