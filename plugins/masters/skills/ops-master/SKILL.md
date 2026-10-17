@@ -112,6 +112,7 @@ Then ask Visuals and Teamwork mode (see protocol).
 | verification-before-completion | Last gate: prove every fix with a before/after measurement or test. |
 | /review-master (handoff) | Security items: run its security audit instead of duplicating it here. |
 | /release-master (handoff) | Versioning, tagging and publishing after deploy changes. |
+| childhood | Goal = just launched / deployed: watch production and late reports until clean. |
 
 Rules: check only the checklist items whose tier fits Scale (see below) and mark the rest "not needed yet" with the trigger that would make them matter. Never change production, live infrastructure or billing without a fresh yes. Prefer the platform's built-in feature over new services.
 
@@ -161,6 +162,12 @@ Not bundled: use the installed versions (see sources below).
 - `webapp-testing`
 - `surgical-patch`
 - `verification-before-completion`
+- `childhood`
+
+
+## Safety overrides
+These rules apply to these children whether they come bundled or installed:
+- `childhood`: monitor and report; rollbacks, hotfix releases and announcements each need a fresh yes.
 
 
 ## Where child skills come from
@@ -171,3 +178,4 @@ If a child is neither installed nor bundled, show the user its install line and 
 | caveman plugin | `investigate-first`, `surgical-patch` | `/plugin marketplace add JuliusBrussee/caveman` then `/plugin install caveman@caveman` |
 | Superpowers (obra) | `systematic-debugging`, `verification-before-completion` | `/plugin marketplace add obra/superpowers-marketplace` then `/plugin install superpowers@superpowers-marketplace` |
 | Anthropic example skills | `webapp-testing` | `/plugin marketplace add anthropics/skills` then `/plugin install example-skills@anthropic-agent-skills` |
+| claude-mem plugin | `childhood` | `/plugin marketplace add thedotmack/claude-mem` then `/plugin install claude-mem@thedotmack` |

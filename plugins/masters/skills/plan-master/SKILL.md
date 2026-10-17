@@ -116,6 +116,8 @@ Then ask Teamwork mode (see protocol).
 | finishing-a-development-branch | Finish = PR or merge. |
 | handoff | Done includes a handoff note, or work stops mid-way. |
 | standup | The user asks for status, or a daily summary. |
+| build | Autopilot: the user wants it hands-off; runs make-plan, do and babysit in one go. |
+| build-and-release | Autopilot through to release; stops for a yes before merging and before releasing. |
 
 Rules: Done = plan only: stop after the plan and show it. Size = Unknown: investigate before planning. Ask before pushing or opening a PR.
 
@@ -152,6 +154,13 @@ Not bundled: use the installed versions (see sources below).
 - `finishing-a-development-branch`
 - `handoff`
 - `standup`
+- `build`
+- `build-and-release`
+
+
+## Safety overrides
+These rules apply to these children whether they come bundled or installed:
+- `build-and-release`: stop before merging the PR and before releasing; each needs a fresh yes.
 
 
 ## Where child skills come from
@@ -159,6 +168,6 @@ If a child is neither installed nor bundled, show the user its install line and 
 
 | Source | Children | Install |
 |---|---|---|
-| claude-mem plugin | `make-plan`, `do`, `handoff`, `standup` | `/plugin marketplace add thedotmack/claude-mem` then `/plugin install claude-mem@thedotmack` |
+| claude-mem plugin | `make-plan`, `do`, `handoff`, `standup`, `build`, `build-and-release` | `/plugin marketplace add thedotmack/claude-mem` then `/plugin install claude-mem@thedotmack` |
 | Superpowers (obra) | `writing-plans`, `using-git-worktrees`, `subagent-driven-development`, `dispatching-parallel-agents`, `executing-plans`, `test-driven-development`, `finishing-a-development-branch` | `/plugin marketplace add obra/superpowers-marketplace` then `/plugin install superpowers@superpowers-marketplace` |
 | feature-dev plugin (Anthropic marketplace) | `feature-dev` | `/plugin install feature-dev@claude-plugins-official` |

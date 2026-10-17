@@ -105,6 +105,8 @@ Then ask Teamwork mode (see protocol).
 | Child | Use when |
 |---|---|
 | commit | Writing a commit from staged and unstaged changes. |
+| release | One-shot release: version-bump, then watch it after it ships. |
+| childhood | After a release is published or deployed: verify what users actually get, watch late CI and reports. |
 | commit-push-pr | Commit, push and open a PR in one go (asks first). |
 | clean-gone | Removing local branches whose remote branch is gone. |
 | oh-my-issues | Issue triage. Read-only mode when Allowed = report only. Triage before release. |
@@ -141,6 +143,8 @@ Not bundled: use the installed versions (see sources below).
 - `clean-gone`
 - `oh-my-issues`
 - `version-bump`
+- `release`
+- `childhood`
 - `finishing-a-development-branch`
 - `verification-before-completion`
 
@@ -149,6 +153,8 @@ Not bundled: use the installed versions (see sources below).
 These rules apply to these children whether they come bundled or installed:
 - `commit-push-pr`: never stage secrets (.env, keys, tokens); create branches with `git checkout -b`; ask before pushing.
 - `clean-gone`: list every [gone] branch and worktree first and wait for a yes; delete with `git branch -d` only, never `-D` or `--force`.
+- `release`: show the version, changelog and publish targets and wait for a yes before tagging or publishing.
+- `childhood`: monitor and report; rollbacks, hotfix releases and announcements each need a fresh yes.
 
 
 ## Where child skills come from
@@ -157,5 +163,5 @@ If a child is neither installed nor bundled, show the user its install line and 
 | Source | Children | Install |
 |---|---|---|
 | commit-commands plugin (Anthropic marketplace) | `commit`, `commit-push-pr`, `clean-gone` | `/plugin install commit-commands@claude-plugins-official` |
-| claude-mem plugin | `oh-my-issues`, `version-bump` | `/plugin marketplace add thedotmack/claude-mem` then `/plugin install claude-mem@thedotmack` |
+| claude-mem plugin | `oh-my-issues`, `version-bump`, `release`, `childhood` | `/plugin marketplace add thedotmack/claude-mem` then `/plugin install claude-mem@thedotmack` |
 | Superpowers (obra) | `finishing-a-development-branch`, `verification-before-completion` | `/plugin marketplace add obra/superpowers-marketplace` then `/plugin install superpowers@superpowers-marketplace` |
