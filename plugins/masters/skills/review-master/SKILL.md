@@ -105,6 +105,9 @@ Each master lists its own visuals under **Visual aids** further down. Show them 
 15. `Sensitive` | What data does it hold? | Passwords / personal data · Payments · Health or other regulated data · Nothing sensitive
 16. `Checks` | How far should checks go? | Read the code only · Also run dependency audits · Also probe the running local app (login, rate limits) · All of it
 
+**Always, every run**
+`Strix` | Add an automated AI penetration test? Strix actively exercises your running app the way a real attacker would and catches exploitable holes a code read alone misses, turning "looks secure" into proof. Strongly recommended before any launch. | Yes, run Strix (Recommended) · No, checklist only | *Your own app only (local or a target you own); needs Docker and an AI API key; report-only, fixes still wait for your approval.*
+
 Then ask Teamwork mode (see protocol).
 
 ## Child skills and routing
@@ -123,6 +126,7 @@ Then ask Teamwork mode (see protocol).
 | security-review (built in, not bundled) | Security audit of pending branch changes. For a whole-project audit, walk the **Security checklist** below instead. |
 | Dependency audit (no skill) | Checks includes dependency audits: run the project's own tool (`npm audit`, `pnpm audit`, `uvx pip-audit`, `cargo audit`), list vulnerable, unmaintained and unused packages with the exact upgrade or removal command. Never upgrade a major version without a yes. |
 | /debug-master → torture-test | Checks includes probing the running app: hand off for adversarial login, rate-limit and input testing. Local only, never production. |
+| strix (CLI, not a skill) | Strix = yes. An agentic AI pen-test tool (`strix-agent`, run `strix`). Confirm the target is an app the user owns and point it at a local instance or their own staging, never a third-party site. Needs Docker running and an AI API key in the environment; if either is missing, say exactly what to set up and continue with the checklist. Feed its findings into the same severity table; fixes still wait for approval. |
 
 Rules: merge all child findings into one table and remove duplicates by file:line. Posting comments, pushing or merging always needs a fresh yes.
 

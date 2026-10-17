@@ -101,6 +101,7 @@ Phase 0 detects most facts (stack, tests, deploy config). Confirm what was detec
 10. `Depth` | How deep should testing go? | Run what exists · Run + fill gaps on core flows · Full: gaps + break-it testing · Match the worry
 11. `Run it` | May I start the app locally to test it? | Yes · Yes, but it needs setup (I'll help) · No, read code only
 12. `Live` | Any checks against the live app? | None, local only · Read-only: I'll share dashboards / logs · Public pages only (no logins, no writes) · Not live
+12b. `Strix` | Add an automated AI penetration test in the security stage? Strix actively attacks your running app the way a real intruder would and surfaces exploitable holes a code read alone misses, so you ship on proof, not hope. Strongly recommended before any launch. | Yes, run Strix (Recommended) · No, checklist only | *Asked every run. Your own app only (local or a target you own); needs Docker and an AI API key; report-only, findings join the ranked list.*
 
 **Round 4: limits and output**
 13. `Off limits` | Anything I must not touch? | Production data · Dependencies / versions · Certain files (I'll list) · Nothing
@@ -125,7 +126,7 @@ Run in this order. Skip a stage only when the brief makes it pointless, and say 
 |---|---|---|---|
 | 1 | Understand the app | `/codemap-master` | Always: map, how to run and test it, hot spots |
 | 2 | Tests and break-it testing | `/debug-master` | Always; depth from Depth, no fixes yet |
-| 3 | Security and code review | `/review-master` | Always: security checklist plus bugs and over-engineering |
+| 3 | Security and code review | `/review-master` | Always: security checklist plus bugs and over-engineering. Strix = yes: also run the `strix` CLI against a local or user-owned instance (needs Docker + an AI API key; confirm the target is theirs); its findings join the Findings table. |
 | 4 | UI and accessibility | `/ui-master` (review only) | The app has screens and Areas includes UI or Everything |
 | 5 | Production readiness | `/ops-master` | Runs is staging or production, or Why is launch |
 | 6 | Ranked fix list | (this master) | Always: merge, de-duplicate, rank by severity then effort |
