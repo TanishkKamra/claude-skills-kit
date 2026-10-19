@@ -80,12 +80,16 @@ Severity:
 
 Log trivial issues too, but they never block finishing.
 
-## 3. References (optional, bounded)
+## 3. References (always, bounded)
 
-Skip this step if the user only wants issues fixed. Otherwise gather **4–8 references from at least 3 sources**, visiting **at most 12 pages in total**.
+**Always** sample designs from the four primary sources first: Watermelon UI, Cult UI, Skiper UI and GSAP. Take at least 2 references from them on every run, even when the user only wants issues fixed. When more are wanted, gather **4–8 references in total from at least 3 sources**, visiting **at most 12 pages in total**.
 
 | Source | Best for | URL |
 |---|---|---|
+| **Watermelon UI (primary)** | animated React components, blocks | `https://ui.watermelon.sh/home` |
+| **Cult UI (primary)** | shadcn-compatible animated components | `https://github.com/nolly-studio/cult-ui`, `https://www.cult-ui.com/` |
+| **Skiper UI (primary)** | motion-rich components and interactions | `https://skiper-ui.com/` |
+| **GSAP (primary)** | scroll, text and timeline motion | `https://gsap.com/showcase/`, `https://madewithgsap.com/` |
 | Awwwards | award-level sites | `https://www.awwwards.com/websites/<category>/` |
 | Godly | modern landing pages | `https://godly.website/` |
 | Land-book | landing pages | `https://land-book.com/` |
