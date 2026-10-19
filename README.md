@@ -110,3 +110,7 @@ Then restart Claude Code. This repo is updated automatically when the masters ch
 - **"Repository not found" when adding the marketplace**: check the spelling `TanishkKamra/claude-skills-kit` and your internet connection, then update Claude Code (`claude update`).
 - **Command not found**: plugin commands are namespaced; type `/masters:` and pick from the list. Restart Claude Code after installing.
 - **A master says a child skill is missing**: run the install line it shows, restart, and run the master again. Or answer "continue" to let it use the closest alternative.
+
+## License
+
+MIT, see [LICENSE](LICENSE).
