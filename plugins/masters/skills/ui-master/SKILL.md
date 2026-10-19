@@ -127,7 +127,7 @@ Unless Text only, show the visuals listed under **Visual aids** following `refer
 8. `Mood` | Overall feeling? | Calm, trustworthy, professional · Bold, loud, experimental · Playful, friendly, colorful · Technical, dense, data-forward
 
 **Round 3: references, brand, content**
-9. `References` | Inspiration sources? | I have links / screenshots · Research online (5 to 8 curated references, top priority Watermelon UI, Cult UI, Skiper UI, GSAP; then Awwwards, Godly, Land-book, Mobbin) and show me · Use competitor sites (I'll name them) · None, decide for me
+9. `References` | Inspiration sources? | I have links / screenshots · Research online (5 to 8 curated references, top priority Watermelon UI, Cult UI, Skiper UI, React Bits, GSAP, Lenis; then Awwwards, Godly, Land-book, Mobbin) and show me · Use competitor sites (I'll name them) · None, decide for me
 10. `Brand` | Brand assets? *(detect)* | Full kit (logo, colors, fonts) · Partial (logo or colors) · None: design palette and type too · Extract tokens from the existing site
 11. `Content` | Copy and imagery? | Real content ready · Placeholder copy is fine · Write the copy for me · Need images too (generate or source)
 12. `Motion` | How much animation? | None / subtle · Moderate (scroll reveals, hovers) · Rich (choreographed, scroll-driven, 3D) · Whatever the direction needs
@@ -147,7 +147,7 @@ Effort comes first and Change level follows the protocol (Phase 1). Skip any que
 - Build every state: hover, focus, active, disabled, loading, empty, error, success. Error text says what went wrong and how to fix it.
 - Real content only, never lorem ipsum.
 - Start the dev server, wait for the port, screenshot at 1440 and 390 (768 when layout changes), then stop it. If it will not start, report BLOCKED; never claim a design pass from reading code.
-- References: always sample designs from Watermelon UI, Cult UI, Skiper UI or GSAP on every run, whatever the References answer (playbook "Sources to require"). Take patterns, never copy assets or text.
+- References: always sample designs from Watermelon UI, Cult UI, Skiper UI, React Bits, GSAP or Lenis on every run, whatever the References answer (playbook "Sources to require"). Take patterns, never copy assets or text.
 - A panel proposes; the build commits to exactly one aesthetic direction.
 
 **Guards**: flat hierarchy → squint test on the screenshots · color-only meaning → pair with icon or text · generic "AI look" → one committed art direction from the taste skills · missing states → a state checklist per component.

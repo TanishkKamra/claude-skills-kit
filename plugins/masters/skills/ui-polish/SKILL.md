@@ -82,14 +82,16 @@ Log trivial issues too, but they never block finishing.
 
 ## 3. References (always, bounded)
 
-**Always** sample designs from the four primary sources first: Watermelon UI, Cult UI, Skiper UI and GSAP. Take at least 2 references from them on every run, even when the user only wants issues fixed. When more are wanted, gather **4–8 references in total from at least 3 sources**, visiting **at most 12 pages in total**.
+**Always** sample designs from the six primary sources first: Watermelon UI, Cult UI, Skiper UI, React Bits, GSAP and Lenis. Take at least 2 references from them on every run, even when the user only wants issues fixed. When more are wanted, gather **4–8 references in total from at least 3 sources**, visiting **at most 12 pages in total**.
 
 | Source | Best for | URL |
 |---|---|---|
 | **Watermelon UI (primary)** | animated React components, blocks | `https://ui.watermelon.sh/home` |
 | **Cult UI (primary)** | shadcn-compatible animated components | `https://github.com/nolly-studio/cult-ui`, `https://www.cult-ui.com/` |
 | **Skiper UI (primary)** | motion-rich components and interactions | `https://skiper-ui.com/` |
+| **React Bits (primary)** | animated text, backgrounds, components | `https://reactbits.dev/` |
 | **GSAP (primary)** | scroll, text and timeline motion | `https://gsap.com/showcase/`, `https://madewithgsap.com/` |
+| **Lenis (primary)** | smooth scroll, scroll-synced motion | `https://lenis.dev/` |
 | Awwwards | award-level sites | `https://www.awwwards.com/websites/<category>/` |
 | Godly | modern landing pages | `https://godly.website/` |
 | Land-book | landing pages | `https://land-book.com/` |
