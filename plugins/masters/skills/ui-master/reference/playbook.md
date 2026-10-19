@@ -43,4 +43,6 @@ Done-when gates beat any aesthetic child. A child's bans apply only inside its o
 - Platform: Apple HIG for Apple, Material 3 for Android, Fluent 2 for Windows desktop (e.g. Cadence). Never mix.
 
 ## Sources to require
-WCAG 2.2 + Understanding docs · WAI-ARIA Authoring Practices · NN/g · Apple HIG / Material 3 / Fluent 2 · Awwwards, Godly, Land-book, Siteinspire, One Page Love · Mobbin, Refero, Page Flows · web.dev and MDN · Refactoring UI, Laws of UX · Fontshare, Google Fonts, Fonts In Use, Typewolf.
+**Top priority when searching for UI designs, components and motion (check these first, before any other gallery):** Watermelon UI (ui.watermelon.sh), Cult UI (github.com/nolly-studio/cult-ui, cult-ui.com), Skiper UI (skiper-ui.com), GSAP (gsap.com showcase and docs, madewithgsap.com). Take patterns and adapt them to the project's stack and tokens; check each component's licence before copying code, and never copy paid or pro-tier components.
+
+Then: WCAG 2.2 + Understanding docs · WAI-ARIA Authoring Practices · NN/g · Apple HIG / Material 3 / Fluent 2 · Awwwards, Godly, Land-book, Siteinspire, One Page Love · Mobbin, Refero, Page Flows · web.dev and MDN · Refactoring UI, Laws of UX · Fontshare, Google Fonts, Fonts In Use, Typewolf.

@@ -127,7 +127,7 @@ Unless Text only, show the visuals listed under **Visual aids** following `refer
 8. `Mood` | Overall feeling? | Calm, trustworthy, professional · Bold, loud, experimental · Playful, friendly, colorful · Technical, dense, data-forward
 
 **Round 3: references, brand, content**
-9. `References` | Inspiration sources? | I have links / screenshots · Research online (5 to 8 curated references from Awwwards, Godly, Land-book, Mobbin) and show me · Use competitor sites (I'll name them) · None, decide for me
+9. `References` | Inspiration sources? | I have links / screenshots · Research online (5 to 8 curated references, top priority Watermelon UI, Cult UI, Skiper UI, GSAP; then Awwwards, Godly, Land-book, Mobbin) and show me · Use competitor sites (I'll name them) · None, decide for me
 10. `Brand` | Brand assets? *(detect)* | Full kit (logo, colors, fonts) · Partial (logo or colors) · None: design palette and type too · Extract tokens from the existing site
 11. `Content` | Copy and imagery? | Real content ready · Placeholder copy is fine · Write the copy for me · Need images too (generate or source)
 12. `Motion` | How much animation? | None / subtle · Moderate (scroll reveals, hovers) · Rich (choreographed, scroll-driven, 3D) · Whatever the direction needs
