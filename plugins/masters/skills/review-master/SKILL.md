@@ -174,6 +174,11 @@ Read `reference/playbook.md` before Phase 2 and before delegating to any child. 
 | ponytail-audit | Over-engineering across the whole repo. |
 | ponytail-debt | Listing deferred `shortcut:` / `ponytail:` markers. |
 | babysit | A live PR with failing CI, waiting reviews or open comments. |
+| differential-review | Security review of a diff, branch or PR: blast radius, git blame, test gaps. |
+| audit-context-building | Before a deep security audit of unfamiliar code: map what each function assumes and guarantees. |
+| semgrep · codeql · sarif-parsing | Static analysis. semgrep first (fast); codeql for deep data-flow; sarif-parsing to read either tool's output. Needs the tool installed. |
+| fp-check | Every security finding before it reaches the table: true or false positive, with evidence. |
+| supply-chain-risk-auditor | Dependency audit: advisories, abandoned upstreams, risky publishers. Use before the no-skill fallback below. |
 | security-review (built in, not bundled) | Security audit of pending branch changes. For a whole-project audit, walk the **Security checklist** below instead. |
 | Dependency audit (no skill) | Checks includes dependency audits: run the project's own tool (`npm audit`, `pnpm audit`, `uvx pip-audit`, `cargo audit`), list vulnerable, unmaintained and unused packages with the exact upgrade or removal command. Never upgrade a major version without a yes. |
 | /debug-master → torture-test | Checks includes probing the running app: hand off for adversarial login, rate-limit and input testing. Local only, never production. |
@@ -227,6 +232,13 @@ Not bundled: use the installed versions (see sources below).
 - `ponytail-audit`
 - `ponytail-debt`
 - `babysit`
+- `differential-review`
+- `audit-context-building`
+- `fp-check`
+- `semgrep`
+- `codeql`
+- `sarif-parsing`
+- `supply-chain-risk-auditor`
 
 
 ## Safety overrides
@@ -245,3 +257,8 @@ If a child is neither installed nor bundled, show the user its install line and 
 | caveman plugin | `caveman-review`, `caveman-evidence-review` | `/plugin marketplace add JuliusBrussee/caveman` then `/plugin install caveman@caveman` |
 | ponytail plugin | `ponytail-review`, `ponytail-audit`, `ponytail-debt` | `/plugin marketplace add DietrichGebert/ponytail` then `/plugin install ponytail@ponytail` |
 | claude-mem plugin | `babysit` | `/plugin marketplace add thedotmack/claude-mem` then `/plugin install claude-mem@thedotmack` |
+| differential-review plugin | `differential-review` | `/plugin marketplace add trailofbits/skills` then `/plugin install differential-review@trailofbits` |
+| audit-context-building plugin | `audit-context-building` | `/plugin marketplace add trailofbits/skills` then `/plugin install audit-context-building@trailofbits` |
+| fp-check plugin | `fp-check` | `/plugin marketplace add trailofbits/skills` then `/plugin install fp-check@trailofbits` |
+| static-analysis plugin | `semgrep`, `codeql`, `sarif-parsing` | `/plugin marketplace add trailofbits/skills` then `/plugin install static-analysis@trailofbits` |
+| supply-chain-risk-auditor plugin | `supply-chain-risk-auditor` | `/plugin marketplace add trailofbits/skills` then `/plugin install supply-chain-risk-auditor@trailofbits` |

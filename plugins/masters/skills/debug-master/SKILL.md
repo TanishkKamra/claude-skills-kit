@@ -170,6 +170,11 @@ Read `reference/playbook.md` before Phase 2 and before delegating to any child. 
 | torture-test | Break it, or QA depth = Heavy, or Proof = full adversarial pass. Reports only, never edits. |
 | verify-and-stop | Minimal check then stop. |
 | verification-before-completion | Mandatory last gate for every run. |
+| property-based-testing | A function should hold for a whole range of inputs (parsers, encoders, round-trips, invariants). |
+| mutation-testing | Tests pass but may be weak: find surviving mutants and the gaps they show. Needs mewt or muton. |
+| address-sanitizer · libfuzzer · aflpp · libafl · harness-writing · fuzzing-dictionary · fuzzing-obstacles · coverage-analysis · ossfuzz | Fuzzing C/C++ or Rust: build, harness, run, measure coverage. Only when the user asks for fuzzing. |
+| cargo-fuzz · atheris · ruzzy | Fuzzing Rust, Python or Ruby respectively. |
+| constant-time-testing · wycheproof | Crypto code only: timing side channels, known-attack test vectors. |
 
 Rules: S1 adds a regression test and a torture-test pass over the touched area. Never touch prod data without an explicit yes.
 
@@ -200,6 +205,22 @@ Not bundled: use the installed versions (see sources below).
 - `torture-test`
 - `verify-and-stop`
 - `verification-before-completion`
+- `property-based-testing`
+- `mutation-testing`
+- `address-sanitizer`
+- `aflpp`
+- `atheris`
+- `cargo-fuzz`
+- `constant-time-testing`
+- `coverage-analysis`
+- `fuzzing-dictionary`
+- `fuzzing-obstacles`
+- `harness-writing`
+- `libafl`
+- `libfuzzer`
+- `ossfuzz`
+- `ruzzy`
+- `wycheproof`
 
 
 ## Where child skills come from
@@ -211,3 +232,6 @@ If a child is neither installed nor bundled, show the user its install line and 
 | Playwright CLI (Microsoft) | `playwright-cli` | see github.com/microsoft/playwright-cli (install the CLI and its skill) |
 | Anthropic example skills | `webapp-testing` | `/plugin marketplace add anthropics/skills` then `/plugin install example-skills@anthropic-agent-skills` |
 | caveman plugin | `verify-and-stop` | `/plugin marketplace add JuliusBrussee/caveman` then `/plugin install caveman@caveman` |
+| property-based-testing plugin | `property-based-testing` | `/plugin marketplace add trailofbits/skills` then `/plugin install property-based-testing@trailofbits` |
+| mutation-testing plugin | `mutation-testing` | `/plugin marketplace add trailofbits/skills` then `/plugin install mutation-testing@trailofbits` |
+| testing-handbook-skills plugin | `address-sanitizer`, `aflpp`, `atheris`, `cargo-fuzz`, `constant-time-testing`, `coverage-analysis`, `fuzzing-dictionary`, `fuzzing-obstacles`, `harness-writing`, `libafl`, `libfuzzer`, `ossfuzz`, `ruzzy`, `wycheproof` | `/plugin marketplace add trailofbits/skills` then `/plugin install testing-handbook-skills@trailofbits` |

@@ -165,6 +165,7 @@ Read `reference/playbook.md` before Phase 2 and before delegating to any child. 
 | claude-md-improver | Auditing and improving CLAUDE.md files (asks before writing). |
 | writing-hookify-rules | Turning "never do X" into a hookify rule (needs the hookify plugin). |
 | caveman-discover · caveman-manage | Only if the user names Caveman Cloud. Not for building skills or MCP. |
+| testing-handbook-generator | Only for generating skills from the Trail of Bits Testing Handbook (appsec.guide). |
 
 Rules: a description must say what it does, when to use it, and when not to. Test triggering before calling it done. Hooks and settings changes need a fresh yes.
 
@@ -206,6 +207,7 @@ Not bundled: use the installed versions (see sources below).
 - `writing-hookify-rules`
 - `caveman-discover`
 - `caveman-manage`
+- `testing-handbook-generator`
 
 
 ## Where child skills come from
@@ -220,3 +222,4 @@ If a child is neither installed nor bundled, show the user its install line and 
 | claude-md-management plugin (Anthropic marketplace) | `claude-md-improver` | `/plugin install claude-md-management@claude-plugins-official` |
 | hookify plugin (Anthropic marketplace) | `writing-hookify-rules` | `/plugin install hookify@claude-plugins-official` |
 | caveman plugin | `caveman-discover`, `caveman-manage` | `/plugin marketplace add JuliusBrussee/caveman` then `/plugin install caveman@caveman` |
+| testing-handbook-skills plugin | `testing-handbook-generator` | `/plugin marketplace add trailofbits/skills` then `/plugin install testing-handbook-skills@trailofbits` |
