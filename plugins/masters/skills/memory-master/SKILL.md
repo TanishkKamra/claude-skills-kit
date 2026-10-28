@@ -163,6 +163,7 @@ Read `reference/playbook.md` before Phase 2 and before delegating to any child. 
 | caveman-learn | Capturing lessons in caveman format. |
 | how-it-works | Explaining how claude-mem works. |
 | ccs-align · cloud-sync · mode-creator · screenpipe | Only on explicit request. cloud-sync uploads memory to a paid cloud and screenpipe reads screen history: warn first. |
+| backup-setup | Local claude-mem database snapshots: set up, status, restore. Restore overwrites the live database: confirm first. |
 | diagnosing-superpowers | Only when superpowers skills are not triggering. |
 | owner-goals | The user's own priorities and open asks, with dated quotes, from prompts they typed. |
 | request-progress | Progress per request, linked to owner goals (run owner-goals first). |
@@ -204,6 +205,7 @@ Not bundled: use the installed versions (see sources below).
 - `caveman-learn`
 - `ccs-align`
 - `cloud-sync`
+- `backup-setup`
 - `mode-creator`
 - `how-it-works`
 - `screenpipe`
@@ -222,7 +224,7 @@ If a child is neither installed nor bundled, show the user its install line and 
 
 | Source | Children | Install |
 |---|---|---|
-| claude-mem plugin | `mem-search`, `knowledge-agent`, `timeline-report`, `weekly-digests`, `standup`, `agent-cost-report`, `ccs-align`, `cloud-sync`, `mode-creator`, `how-it-works`, `screenpipe`, `owner-goals`, `request-progress` | `/plugin marketplace add thedotmack/claude-mem` then `/plugin install claude-mem@thedotmack` |
+| claude-mem plugin | `mem-search`, `knowledge-agent`, `timeline-report`, `weekly-digests`, `standup`, `agent-cost-report`, `ccs-align`, `cloud-sync`, `backup-setup`, `mode-creator`, `how-it-works`, `screenpipe`, `owner-goals`, `request-progress` | `/plugin marketplace add thedotmack/claude-mem` then `/plugin install claude-mem@thedotmack` |
 | session-report plugin (Anthropic marketplace) | `session-report` | `/plugin install session-report@claude-plugins-official` |
 | receipts plugin (Anthropic marketplace) | `receipts` | `/plugin install receipts@claude-plugins-official` |
 | claude-md-management plugin (Anthropic marketplace) | `claude-md-improver` | `/plugin install claude-md-management@claude-plugins-official` |
