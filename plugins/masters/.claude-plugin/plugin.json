@@ -1,7 +1,7 @@
 {
   "name": "masters",
-  "version": "2026.11.08.1545",
-  "description": "14 master commands that interview you, show a brief, then run the right skills together (UI, visuals, planning, debugging, review + security, codemap, refactor, release, ops, style, docs, research, builder, memory).",
+  "version": "2026.11.09.0504",
+  "description": "16 master commands that interview you, show a brief, then run the right skills together (app from scratch, audit, UI, visuals, planning, debugging, review + security, codemap, refactor, release, ops, style, docs, research, builder, memory).",
   "author": {
     "name": "TanishkKamra"
   },
