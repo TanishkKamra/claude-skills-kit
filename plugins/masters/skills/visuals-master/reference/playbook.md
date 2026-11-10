@@ -1,3 +1,4 @@
+<!-- (c) 2026 Tanishk Kamra | MIT | github.com/TanishkKamra/claude-skills-kit | tkp-0b86bfd25d-6b8f0c󠁻󠁴󠁫󠁰󠀭󠀰󠁢󠀸󠀶󠁢󠁦󠁤󠀲󠀵󠁤󠀭󠀶󠁢󠀸󠁦󠀰󠁣󠁽 -->
 # visuals-master expert playbook
 
 Read before Phase 2 and before delegating to any child. On conflict this file beats the child. Copy its gate additions into SPEC.md Done-when.

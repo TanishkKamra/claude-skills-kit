@@ -2,6 +2,7 @@
 name: debug-master
 description: "Master command for fixing bugs, writing tests, verifying finished work, browser and web app testing, and adversarial QA that tries to break an app. Interviews the user (goal, symptom, reproduction, environment, severity, test level, proof of done), shows a brief, then runs the debugging and testing skills together. Use only when the user types /debug-master or asks for the debug master."
 ---
+<!-- (c) 2026 Tanishk Kamra | MIT | github.com/TanishkKamra/claude-skills-kit | tkp-0b86bfd25d-efa36a󠁻󠁴󠁫󠁰󠀭󠀰󠁢󠀸󠀶󠁢󠁦󠁤󠀲󠀵󠁤󠀭󠁥󠁦󠁡󠀳󠀶󠁡󠁽 -->
 
 # Debug Master
 

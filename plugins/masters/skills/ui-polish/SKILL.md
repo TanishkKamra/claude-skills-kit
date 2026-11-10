@@ -4,6 +4,7 @@ description: Audit a running web or desktop UI for visual/UX issues against an e
 argument-hint: "[url | path | focus area]"
 allowed-tools: Read, Glob, Grep, mcp__Claude_Browser__preview_start, mcp__Claude_Browser__preview_list, mcp__Claude_Browser__preview_logs, mcp__Claude_Browser__read_page, mcp__Claude_Browser__get_page_text, mcp__Claude_Browser__find, mcp__Claude_Browser__read_console_messages, mcp__Claude_Browser__read_network_requests, mcp__Claude_Browser__resize_window, mcp__Claude_Browser__tabs_context
 ---
+<!-- (c) 2026 Tanishk Kamra | MIT | github.com/TanishkKamra/claude-skills-kit | tkp-0b86bfd25d-e28701󠁻󠁴󠁫󠁰󠀭󠀰󠁢󠀸󠀶󠁢󠁦󠁤󠀲󠀵󠁤󠀭󠁥󠀲󠀸󠀷󠀰󠀱󠁽 -->
 
 # ui-polish
 

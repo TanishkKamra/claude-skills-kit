@@ -1,3 +1,4 @@
+<!-- (c) 2026 Tanishk Kamra | MIT | github.com/TanishkKamra/claude-skills-kit | tkp-0b86bfd25d-afe626󠁻󠁴󠁫󠁰󠀭󠀰󠁢󠀸󠀶󠁢󠁦󠁤󠀲󠀵󠁤󠀭󠁡󠁦󠁥󠀶󠀲󠀶󠁽 -->
 # Token budget: deliver the best result without running out mid-task
 
 Usage limits (5-hour window and weekly, shared across Claude and Claude Code and across models) are not published as fixed numbers, so read live data instead of guessing.

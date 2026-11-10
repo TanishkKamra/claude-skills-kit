@@ -2,6 +2,7 @@
 name: app-master
 description: "Master command for building a whole app, site or tool from scratch. Runs one complete upfront interview (idea, users, features, data, accounts, look and feel, tech, hosting, scale, launch), writes a project brief, then runs the other master commands stage by stage (research, plan, visuals, UI, build, test, security review, production readiness, docs, release) with a checkpoint after each stage. Use only when the user types /app-master or asks for the app master."
 ---
+<!-- (c) 2026 Tanishk Kamra | MIT | github.com/TanishkKamra/claude-skills-kit | tkp-0b86bfd25d-b9ae4c󠁻󠁴󠁫󠁰󠀭󠀰󠁢󠀸󠀶󠁢󠁦󠁤󠀲󠀵󠁤󠀭󠁢󠀹󠁡󠁥󠀴󠁣󠁽 -->
 
 # App Master
 

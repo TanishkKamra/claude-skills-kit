@@ -2,6 +2,7 @@
 name: memory-master
 description: "Master command for past work and usage: searching what was done before, timelines, weekly digests and standups, token and cost reports, impact receipts for a manager, knowledge bases built from past sessions, memory maintenance and sync. Interviews the user (task, period, project, topic, report type, audience, contents, format, sources), shows a brief, then runs the memory and reporting skills together. Use only when the user types /memory-master or asks for the memory master."
 ---
+<!-- (c) 2026 Tanishk Kamra | MIT | github.com/TanishkKamra/claude-skills-kit | tkp-0b86bfd25d-5b31d8󠁻󠁴󠁫󠁰󠀭󠀰󠁢󠀸󠀶󠁢󠁦󠁤󠀲󠀵󠁤󠀭󠀵󠁢󠀳󠀱󠁤󠀸󠁽 -->
 
 # Memory Master
 

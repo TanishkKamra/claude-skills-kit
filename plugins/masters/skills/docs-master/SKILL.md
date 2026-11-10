@@ -2,6 +2,7 @@
 name: docs-master
 description: "Master command for slide decks, documents, reports, proposals, specs, PDFs, spreadsheets, company updates, newsletters and FAQs. Interviews the user (format, objective, audience, key message, length, structure, sources, theme, extras, delivery), shows a brief, then runs the document and slide skills together. Use only when the user types /docs-master or asks for the docs master."
 ---
+<!-- (c) 2026 Tanishk Kamra | MIT | github.com/TanishkKamra/claude-skills-kit | tkp-0b86bfd25d-287482󠁻󠁴󠁫󠁰󠀭󠀰󠁢󠀸󠀶󠁢󠁦󠁤󠀲󠀵󠁤󠀭󠀲󠀸󠀷󠀴󠀸󠀲󠁽 -->
 
 # Docs Master
 

@@ -2,6 +2,7 @@
 name: plan-master
 description: "Master command for turning an idea, feature or project into a plan and carrying it out: shaping the idea, writing the plan, choosing inline, subagent or parallel execution, git branches and worktrees, finishing with a PR, handoff or standup. Interviews the user, shows a brief, then runs the planning and execution skills together. Use only when the user types /plan-master or asks for the plan master."
 ---
+<!-- (c) 2026 Tanishk Kamra | MIT | github.com/TanishkKamra/claude-skills-kit | tkp-0b86bfd25d-f45358󠁻󠁴󠁫󠁰󠀭󠀰󠁢󠀸󠀶󠁢󠁦󠁤󠀲󠀵󠁤󠀭󠁦󠀴󠀵󠀳󠀵󠀸󠁽 -->
 
 # Plan Master
 

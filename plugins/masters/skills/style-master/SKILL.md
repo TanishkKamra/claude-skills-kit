@@ -2,6 +2,7 @@
 name: style-master
 description: "Master command for how Claude talks and how many tokens it spends: terse reply modes (lite to ultra), compressing CLAUDE.md and memory files, commit message style, forcing complete output, delegating search to compressed subagents, and measuring token savings. Interviews the user, shows a brief, then sets up the right output-style skills. Use only when the user types /style-master or asks for the style master."
 ---
+<!-- (c) 2026 Tanishk Kamra | MIT | github.com/TanishkKamra/claude-skills-kit | tkp-0b86bfd25d-05281e󠁻󠁴󠁫󠁰󠀭󠀰󠁢󠀸󠀶󠁢󠁦󠁤󠀲󠀵󠁤󠀭󠀰󠀵󠀲󠀸󠀱󠁥󠁽 -->
 
 # Style Master
 

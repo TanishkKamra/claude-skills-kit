@@ -1,3 +1,4 @@
+<!-- (c) 2026 Tanishk Kamra | MIT | github.com/TanishkKamra/claude-skills-kit | tkp-0b86bfd25d-da3eda󠁻󠁴󠁫󠁰󠀭󠀰󠁢󠀸󠀶󠁢󠁦󠁤󠀲󠀵󠁤󠀭󠁤󠁡󠀳󠁥󠁤󠁡󠁽 -->
 # Spec: agree on "done" before doing anything
 
 Write `SPEC.md` in the run folder after the interview and before the brief. The brief shows its Done-when list; after the user says go, the criteria are frozen (changing one needs the user's yes).

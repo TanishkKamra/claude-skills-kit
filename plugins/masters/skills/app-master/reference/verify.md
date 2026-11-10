@@ -1,3 +1,4 @@
+<!-- (c) 2026 Tanishk Kamra | MIT | github.com/TanishkKamra/claude-skills-kit | tkp-0b86bfd25d-c6c5d8󠁻󠁴󠁫󠁰󠀭󠀰󠁢󠀸󠀶󠁢󠁦󠁤󠀲󠀵󠁤󠀭󠁣󠀶󠁣󠀵󠁤󠀸󠁽 -->
 # Baseline, evidence and independent verification
 
 ## Baseline (before the first change)
