@@ -1,6 +1,6 @@
 {
   "name": "masters",
-  "version": "2026.11.09.1938",
+  "version": "2026.11.10.1316",
   "description": "16 master commands that interview you, show a brief, then run the right skills together (app from scratch, audit, UI, visuals, planning, debugging, review + security, codemap, refactor, release, ops, style, docs, research, builder, memory).",
   "author": {
     "name": "TanishkKamra"
