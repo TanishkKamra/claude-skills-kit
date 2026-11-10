@@ -2,7 +2,7 @@
 name: refactor-master
 description: "Master command for changing code safely: bug fixes at the narrowest layer, refactors with no behavior change, library, API or schema migrations, minimal new builds, and simplifying over-built code. Interviews the user (change type, blast radius, what must not change, risk, tests, rollback, git), shows a brief, then runs the change skills together. Use only when the user types /refactor-master or asks for the refactor master."
 ---
-<!-- (c) 2026 Tanishk Kamra | MIT | github.com/TanishkKamra/claude-skills-kit | tkp-0b86bfd25d-be50b0󠀁󠁴󠁫󠁰󠀭󠀰󠁢󠀸󠀶󠁢󠁦󠁤󠀲󠀵󠁤󠀭󠁢󠁥󠀵󠀰󠁢󠀰󠁿 -->
+<!-- (c) 2026 Tanishk Kamra | MIT | github.com/TanishkKamra/claude-skills-kit | tkp-0b86bfd25d-be50b0󠁻󠁴󠁫󠁰󠀭󠀰󠁢󠀸󠀶󠁢󠁦󠁤󠀲󠀵󠁤󠀭󠁢󠁥󠀵󠀰󠁢󠀰󠁽 -->
 
 # Refactor Master
 

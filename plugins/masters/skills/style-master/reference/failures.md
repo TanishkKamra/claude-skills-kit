@@ -1,4 +1,4 @@
-<!-- (c) 2026 Tanishk Kamra | MIT | github.com/TanishkKamra/claude-skills-kit | tkp-0b86bfd25d-8a6f8e󠀁󠁴󠁫󠁰󠀭󠀰󠁢󠀸󠀶󠁢󠁦󠁤󠀲󠀵󠁤󠀭󠀸󠁡󠀶󠁦󠀸󠁥󠁿 -->
+<!-- (c) 2026 Tanishk Kamra | MIT | github.com/TanishkKamra/claude-skills-kit | tkp-0b86bfd25d-8a6f8e󠁻󠁴󠁫󠁰󠀭󠀰󠁢󠀸󠀶󠁢󠁦󠁤󠀲󠀵󠁤󠀭󠀸󠁡󠀶󠁦󠀸󠁥󠁽 -->
 # When something fails
 
 General rule: **one retry, then stop guessing.** Say what failed in one line, name the closest fallback, carry on if the fallback is safe, and mark every affected criterion NOT VERIFIED in the report. Never report success on a step that was skipped.

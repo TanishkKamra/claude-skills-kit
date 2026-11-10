@@ -4,7 +4,7 @@ description: Exhaustive adversarial QA of one or more of the user's projects. Fa
 argument-hint: "[project folder names, or blank to choose]"
 disable-model-invocation: true
 ---
-<!-- (c) 2026 Tanishk Kamra | MIT | github.com/TanishkKamra/claude-skills-kit | tkp-0b86bfd25d-59d9ab󠀁󠁴󠁫󠁰󠀭󠀰󠁢󠀸󠀶󠁢󠁦󠁤󠀲󠀵󠁤󠀭󠀵󠀹󠁤󠀹󠁡󠁢󠁿 -->
+<!-- (c) 2026 Tanishk Kamra | MIT | github.com/TanishkKamra/claude-skills-kit | tkp-0b86bfd25d-59d9ab󠁻󠁴󠁫󠁰󠀭󠀰󠁢󠀸󠀶󠁢󠁦󠁤󠀲󠀵󠁤󠀭󠀵󠀹󠁤󠀹󠁡󠁢󠁽 -->
 
 # Torture test
 

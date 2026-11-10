@@ -1,4 +1,4 @@
-<!-- (c) 2026 Tanishk Kamra | MIT | github.com/TanishkKamra/claude-skills-kit | tkp-0b86bfd25d-1a950a󠀁󠁴󠁫󠁰󠀭󠀰󠁢󠀸󠀶󠁢󠁦󠁤󠀲󠀵󠁤󠀭󠀱󠁡󠀹󠀵󠀰󠁡󠁿 -->
+<!-- (c) 2026 Tanishk Kamra | MIT | github.com/TanishkKamra/claude-skills-kit | tkp-0b86bfd25d-1a950a󠁻󠁴󠁫󠁰󠀭󠀰󠁢󠀸󠀶󠁢󠁦󠁤󠀲󠀵󠁤󠀭󠀱󠁡󠀹󠀵󠀰󠁡󠁽 -->
 # Visuals
 
 Show the master's **Visual aids** at these moments (unless the user chose Text only):

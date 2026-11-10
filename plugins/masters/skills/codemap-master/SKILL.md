@@ -2,7 +2,7 @@
 name: codemap-master
 description: "Master command for understanding a codebase: onboarding into an unfamiliar repo, architecture maps, finding where something lives, tracing what calls what, explaining a file or function, and saving the learnings. Interviews the user (purpose, scope, audience, depth, format, diagrams), shows a brief, then runs the exploration skills together. Use only when the user types /codemap-master or asks for the codemap master."
 ---
-<!-- (c) 2026 Tanishk Kamra | MIT | github.com/TanishkKamra/claude-skills-kit | tkp-0b86bfd25d-22660a󠀁󠁴󠁫󠁰󠀭󠀰󠁢󠀸󠀶󠁢󠁦󠁤󠀲󠀵󠁤󠀭󠀲󠀲󠀶󠀶󠀰󠁡󠁿 -->
+<!-- (c) 2026 Tanishk Kamra | MIT | github.com/TanishkKamra/claude-skills-kit | tkp-0b86bfd25d-22660a󠁻󠁴󠁫󠁰󠀭󠀰󠁢󠀸󠀶󠁢󠁦󠁤󠀲󠀵󠁤󠀭󠀲󠀲󠀶󠀶󠀰󠁡󠁽 -->
 
 # Codemap Master
 
