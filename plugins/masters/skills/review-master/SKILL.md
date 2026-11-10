@@ -2,6 +2,7 @@
 name: review-master
 description: "Master command for code review and code quality: reviewing a diff, branch or PR, multi-agent PR review, responding to review feedback, over-engineering audits, whole-project security audits (HTTPS, cookies and sessions, endpoint auth, login hardening, error leaks, dependencies), deferred-shortcut ledgers, and babysitting a PR until it merges. Interviews the user (role, target, focus, depth, risk, standards, what to do with findings), shows a brief, then runs the review skills together. Use only when the user types /review-master or asks for the review master."
 ---
+<!-- (c) 2026 Tanishk Kamra | MIT | github.com/TanishkKamra/claude-skills-kit | tkp-0b86bfd25d-e6fe93󠀁󠁴󠁫󠁰󠀭󠀰󠁢󠀸󠀶󠁢󠁦󠁤󠀲󠀵󠁤󠀭󠁥󠀶󠁦󠁥󠀹󠀳󠁿 -->
 
 # Review Master
 

@@ -2,6 +2,7 @@
 name: audit-master
 description: "Master command for putting an existing app through everything: understand the codebase, run and extend its tests, break-it testing, security and code review, UI and accessibility review, production readiness, then one ranked fix list where the user picks what to fix, with each fix verified. Runs the other master commands stage by stage (codemap, debug, review, ui, ops, refactor, docs, release) with a checkpoint after each. Use only when the user types /audit-master or asks for the audit master."
 ---
+<!-- (c) 2026 Tanishk Kamra | MIT | github.com/TanishkKamra/claude-skills-kit | tkp-0b86bfd25d-d35f5c󠀁󠁴󠁫󠁰󠀭󠀰󠁢󠀸󠀶󠁢󠁦󠁤󠀲󠀵󠁤󠀭󠁤󠀳󠀵󠁦󠀵󠁣󠁿 -->
 
 # Audit Master
 

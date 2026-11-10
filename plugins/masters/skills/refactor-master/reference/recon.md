@@ -1,3 +1,4 @@
+<!-- (c) 2026 Tanishk Kamra | MIT | github.com/TanishkKamra/claude-skills-kit | tkp-0b86bfd25d-9c4f09󠀁󠁴󠁫󠁰󠀭󠀰󠁢󠀸󠀶󠁢󠁦󠁤󠀲󠀵󠁤󠀭󠀹󠁣󠀴󠁦󠀰󠀹󠁿 -->
 # Recon: gather context before asking or acting
 
 Goal: know the ground truth before the interview, so you ask less and guess nothing. Write findings to `CONTEXT.md` in the run folder as you go.

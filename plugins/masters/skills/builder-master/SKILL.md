@@ -2,6 +2,7 @@
 name: builder-master
 description: "Master command for extending Claude: writing new skills, slash commands, subagents, hooks and plugins, building MCP servers, improving CLAUDE.md files, and recommending Claude Code automations. Interviews the user (what to build, purpose, trigger, scope, inputs, delegation, limits, MCP target and stack, auth, verification), shows a brief, then runs the builder skills together. Use only when the user types /builder-master or asks for the builder master."
 ---
+<!-- (c) 2026 Tanishk Kamra | MIT | github.com/TanishkKamra/claude-skills-kit | tkp-0b86bfd25d-6b0758󠀁󠁴󠁫󠁰󠀭󠀰󠁢󠀸󠀶󠁢󠁦󠁤󠀲󠀵󠁤󠀭󠀶󠁢󠀰󠀷󠀵󠀸󠁿 -->
 
 # Builder Master
 

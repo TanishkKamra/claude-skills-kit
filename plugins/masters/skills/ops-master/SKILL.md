@@ -2,6 +2,7 @@
 name: ops-master
 description: "Master command for production readiness: reliability (timeouts, retries, idempotency, health checks, backups), performance (caching, indexes, N+1 queries, connection pooling, latency), observability (logging, metrics, tracing, alerts, SLOs), concurrency (races, locking) and deployment (CI/CD, containers, rollouts, rollbacks, feature flags, cost). Interviews the user about scale, hosting and uptime needs, checks only what fits the app's size, shows a brief, then audits and fixes what the user approves. Use only when the user types /ops-master or asks for the ops master."
 ---
+<!-- (c) 2026 Tanishk Kamra | MIT | github.com/TanishkKamra/claude-skills-kit | tkp-0b86bfd25d-60d4cd󠀁󠁴󠁫󠁰󠀭󠀰󠁢󠀸󠀶󠁢󠁦󠁤󠀲󠀵󠁤󠀭󠀶󠀰󠁤󠀴󠁣󠁤󠁿 -->
 
 # Ops Master
 

@@ -2,6 +2,7 @@
 name: ui-master
 description: "Master command for designing, redesigning, polishing or reviewing any user interface: websites, landing pages, web apps, dashboards, components, desktop and mobile screens. Interviews the user (purpose, audience, stack, theme to replicate, references or online research, look and feel), shows a brief, then runs the right design skills together (solo, relay or panel + judge). Use only when the user types /ui-master or asks for the UI master."
 ---
+<!-- (c) 2026 Tanishk Kamra | MIT | github.com/TanishkKamra/claude-skills-kit | tkp-0b86bfd25d-97a1cd󠀁󠁴󠁫󠁰󠀭󠀰󠁢󠀸󠀶󠁢󠁦󠁤󠀲󠀵󠁤󠀭󠀹󠀷󠁡󠀱󠁣󠁤󠁿 -->
 
 # UI Master
 

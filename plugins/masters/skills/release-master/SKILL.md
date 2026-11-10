@@ -2,6 +2,7 @@
 name: release-master
 description: "Master command for git and GitHub housekeeping and releases: committing, pushing and opening PRs, cleaning stale branches, triaging issues, version bumps (SemVer or CalVer), changelogs, tagging and publishing releases. Interviews the user (task, repo, issue scope, allowed GitHub actions, bump, changelog, gates, how far to go), shows a brief, then runs the release skills together. Use only when the user types /release-master or asks for the release master."
 ---
+<!-- (c) 2026 Tanishk Kamra | MIT | github.com/TanishkKamra/claude-skills-kit | tkp-0b86bfd25d-292bfd󠀁󠁴󠁫󠁰󠀭󠀰󠁢󠀸󠀶󠁢󠁦󠁤󠀲󠀵󠁤󠀭󠀲󠀹󠀲󠁢󠁦󠁤󠁿 -->
 
 # Release Master
 

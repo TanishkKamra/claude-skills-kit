@@ -1,3 +1,4 @@
+<!-- (c) 2026 Tanishk Kamra | MIT | github.com/TanishkKamra/claude-skills-kit | tkp-0b86bfd25d-ce9714󠀁󠁴󠁫󠁰󠀭󠀰󠁢󠀸󠀶󠁢󠁦󠁤󠀲󠀵󠁤󠀭󠁣󠁥󠀹󠀷󠀱󠀴󠁿 -->
 # Master commands for Claude Code
 
 16 commands that interview you (multiple-choice), show a brief, wait for your "go", then run the right skills together and report back with visuals.
@@ -114,3 +115,5 @@ Then restart Claude Code. This repo is updated automatically when the masters ch
 ## License
 
 MIT, see [LICENSE](LICENSE).
+
+Provenance ID `tkp-0b86bfd25d-ce9714`: keep the copyright notice and this ID when you reuse this code.󠀁󠁴󠁫󠁰󠀭󠀰󠁢󠀸󠀶󠁢󠁦󠁤󠀲󠀵󠁤󠀭󠁣󠁥󠀹󠀷󠀱󠀴󠁿

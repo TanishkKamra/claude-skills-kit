@@ -1,3 +1,4 @@
+/* (c) 2026 Tanishk Kamra | MIT | github.com/TanishkKamra/claude-skills-kit | tkp-0b86bfd25d-759bfb󠀁󠁴󠁫󠁰󠀭󠀰󠁢󠀸󠀶󠁢󠁦󠁤󠀲󠀵󠁤󠀭󠀷󠀵󠀹󠁢󠁦󠁢󠁿 */
 @page { size: A4; margin: 16mm 14mm 16mm 14mm; }
 * { box-sizing: border-box; }
 body { font-family: "Segoe UI", system-ui, sans-serif; color: #1b1f24; font-size: 10pt; line-height: 1.45; margin: 0; }
@@ -25,3 +26,4 @@ td.id { width: 52px; font-family: Consolas, monospace; font-size: 8pt; color: #5
 .note h3 { margin: 0 0 4px; font-size: 10pt; }
 footer { margin-top: 16px; font-size: 8pt; color: #57606a; border-top: 1px solid #d0d7de; padding-top: 6px; }
 code { font-family: Consolas, monospace; font-size: 8.5pt; background: #f2f4f7; padding: 0 3px; border-radius: 3px; }
+:root { --build-id: "tkp-0b86bfd25d-759bfb"; }

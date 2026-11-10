@@ -2,6 +2,7 @@
 name: research-master
 description: "Master command for researching any topic online: open web, social platforms (Reddit, X, YouTube, GitHub, Xiaohongshu, Bilibili and more), papers, developer docs, company and people lookups, finance data, and crawling whole sites. Interviews the user (purpose, question, depth, sources, freshness, evidence standard, format), shows a brief, then runs the research tools together. Use only when the user types /research-master or asks for the research master."
 ---
+<!-- (c) 2026 Tanishk Kamra | MIT | github.com/TanishkKamra/claude-skills-kit | tkp-0b86bfd25d-7e2def󠀁󠁴󠁫󠁰󠀭󠀰󠁢󠀸󠀶󠁢󠁦󠁤󠀲󠀵󠁤󠀭󠀷󠁥󠀲󠁤󠁥󠁦󠁿 -->
 
 # Research Master
 

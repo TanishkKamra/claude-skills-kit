@@ -2,6 +2,7 @@
 name: visuals-master
 description: "Master command for brand kits, generated web or mobile mockup images, posters and one-page visuals, and turning an image or screenshot into working code. Interviews the user (task, purpose, style, colors, references, assets, fidelity), shows a brief, then runs the right visual skills together. Use only when the user types /visuals-master or asks for the visuals master."
 ---
+<!-- (c) 2026 Tanishk Kamra | MIT | github.com/TanishkKamra/claude-skills-kit | tkp-0b86bfd25d-ee50eb󠀁󠁴󠁫󠁰󠀭󠀰󠁢󠀸󠀶󠁢󠁦󠁤󠀲󠀵󠁤󠀭󠁥󠁥󠀵󠀰󠁥󠁢󠁿 -->
 
 # Visuals Master
 

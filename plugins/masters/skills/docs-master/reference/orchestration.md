@@ -1,3 +1,4 @@
+<!-- (c) 2026 Tanishk Kamra | MIT | github.com/TanishkKamra/claude-skills-kit | tkp-0b86bfd25d-2f783e󠀁󠁴󠁫󠁰󠀭󠀰󠁢󠀸󠀶󠁢󠁦󠁤󠀲󠀵󠁤󠀭󠀲󠁦󠀷󠀸󠀳󠁥󠁿 -->
 # Staged runs (/app-master, /audit-master) and the project brief
 
 `<project>/.master-runs/project-brief.md` carries state between stages. It is the single source of truth for a staged run.

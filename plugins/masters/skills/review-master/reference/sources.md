@@ -1,3 +1,4 @@
+<!-- (c) 2026 Tanishk Kamra | MIT | github.com/TanishkKamra/claude-skills-kit | tkp-0b86bfd25d-70720f󠀁󠁴󠁫󠁰󠀭󠀰󠁢󠀸󠀶󠁢󠁦󠁤󠀲󠀵󠁤󠀭󠀷󠀰󠀷󠀲󠀰󠁦󠁿 -->
 # Source quality: use only the best of the best
 
 **Top-tier test** (all four): (1) the primary or normative body (spec owner, standards body, regulator, vendor of the thing), (2) versioned and dated, (3) accountable (named editors, errata or changelog), (4) not paid to rank. Anything below Tier 1 must be cross-checked against a Tier 1 source before it drives a decision. Cite the tier next to every source in `CONTEXT.md`.
