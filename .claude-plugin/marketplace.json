@@ -8,7 +8,7 @@
     {
       "name": "masters",
       "source": "./plugins/masters",
-      "version": "2026.11.11.2157",
+      "version": "2026.11.12.1235",
       "description": "16 interviewing master commands for Claude Code"
     }
   ]

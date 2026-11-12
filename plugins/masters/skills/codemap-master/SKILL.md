@@ -161,6 +161,7 @@ Read `reference/playbook.md` before Phase 2 and before delegating to any child. 
 | what-the | One file or function, with the playbook's Who/What/Where/Why/When body. Never alone. |
 | feature-dev | Its code-explorer agent prompt only (`children/feature-dev/agents/code-explorer.md`). Never invoke the feature-dev skill here: it implements. |
 | audit-context-building | Purpose = security audit or threat model: per-function assumptions, guarantees and dependencies. |
+| floorplan | The user wants an interactive, zoomable architecture map to keep or share (Diagrams or Format asks for a visual map). Writes `floorplan/index.html` into the repo, so ask first. |
 
 Rules: starting from an error hands off to /debug-master. Mark every claim verified (file:line) or inferred.
 
@@ -193,6 +194,7 @@ Not bundled: use the installed versions (see sources below).
 - `what-the`
 - `feature-dev`
 - `audit-context-building`
+- `floorplan`
 
 
 ## Where child skills come from
@@ -203,3 +205,4 @@ If a child is neither installed nor bundled, show the user its install line and 
 | claude-mem plugin | `learn-codebase`, `smart-explore`, `pathfinder`, `what-the` | `/plugin marketplace add thedotmack/claude-mem` then `/plugin install claude-mem@thedotmack` |
 | feature-dev plugin (Anthropic marketplace) | `feature-dev` | `/plugin install feature-dev@claude-plugins-official` |
 | audit-context-building plugin | `audit-context-building` | `/plugin marketplace add trailofbits/skills` then `/plugin install audit-context-building@trailofbits` |
+| floorplan plugin | `floorplan` | `/plugin marketplace add haydenschmitty/floorplan` then `/plugin install floorplan@floorplan` |

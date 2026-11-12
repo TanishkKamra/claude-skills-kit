@@ -7,6 +7,7 @@ Read before Phase 2 and before delegating to any child. On conflict this file be
 - **Where is X**: smart-explore (`smart_search`, `smart_outline`). **What calls Y**: the LSP tool (`findReferences`, `incomingCalls`), else `rg -n`. A claim about behaviour needs `smart_unfold` or a Read of that symbol, never an outline alone.
 - **learn-codebase** only for repos under about 150 source files or when the user insists; otherwise use the tiered read below. Warn about token cost on large repos.
 - **pathfinder** only for "find duplicated concerns / propose a unified architecture". Ask cost first; its output goes to the run folder, not the repo root; skip its `/make-plan` prompts unless asked.
+- **floorplan** only when the user wants an interactive map to keep or share; Mermaid or C4 in the report covers the rest. It writes a `floorplan/` folder into the repo: ask before running, and on a repo that already has one use its refresh mode, not a full redraw. Its node descriptions are generated, so spot-check the ones the report relies on against code and tag them VERIFIED or INFERRED. Blueprints from a PRD or spec belong to /plan-master, not here.
 - **what-the** never alone. Read the file or function fully, then answer: Who (callers), What (one sentence), Where (`file:line`), Why it exists (git log, blame or tests), When it runs. Tag each line VERIFIED(`file:line`) or INFERRED. 3 to 5 lines.
 
 ## Tiered read (default for whole-repo understanding)
