@@ -155,6 +155,7 @@ Read `reference/playbook.md` before Phase 2 and before delegating to any child. 
 ## Child skills and routing
 | Child | Use when |
 |---|---|
+| design-playbook | Every run. Supervisor, not a generator: load it first and apply its gates (contrast, type, layout, anti-slop, audit with proof) to every board, mockup and poster before Done. |
 | brandkit | Task = Brand kit, or Assets = Nothing and a build needs a brand. Runs first. |
 | imagegen-frontend-web | Web mockups. |
 | imagegen-frontend-mobile | Mobile mockups. |
@@ -183,6 +184,7 @@ Shown as described in the protocol (inline + the visual report page). Component 
 
 ## Child skills
 Not bundled: use the installed versions (see sources below).
+- `design-playbook`
 - `brandkit`
 - `imagegen-frontend-web`
 - `imagegen-frontend-mobile`
@@ -200,5 +202,6 @@ If a child is neither installed nor bundled, show the user its install line and 
 
 | Source | Children | Install |
 |---|---|---|
+| design-playbook plugin (Tanishk Kamra) | `design-playbook` | `/plugin marketplace add TanishkKamra/design-playbook` then `/plugin install design-playbook@design-playbook` |
 | Taste skills (Leonxlnx) | `brandkit`, `imagegen-frontend-web`, `imagegen-frontend-mobile`, `image-to-code` | `/plugin marketplace add Leonxlnx/taste-skill` then `/plugin install taste-skill@taste-skill` |
 | Anthropic example skills | `canvas-design` | `/plugin marketplace add anthropics/skills` then `/plugin install example-skills@anthropic-agent-skills` |

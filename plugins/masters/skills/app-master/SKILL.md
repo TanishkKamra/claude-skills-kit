@@ -170,8 +170,8 @@ Run in this order. Skip a stage only when the brief makes it pointless, and say 
 |---|---|---|---|
 | 1 | Research | `/research-master` | References = research online, or the idea needs market or tech facts |
 | 2 | Plan and architecture | `/plan-master` (planning only) | Always |
-| 3 | Brand and mockups | `/visuals-master` | Brand = create a kit, or Theme = show me directions |
-| 4 | UI design | `/ui-master` | Anything with screens |
+| 3 | Brand and mockups | `/visuals-master`, supervised by `design-playbook` | Brand = create a kit, or Theme = show me directions |
+| 4 | UI design | `/ui-master`, supervised by `design-playbook` | Anything with screens |
 | 5 | Build | `/plan-master` (execution) | Always |
 | 6 | Test and fix | `/debug-master` | Always; depth from Tests |
 | 7 | Security and code review | `/review-master` (security audit) | Always; full checklist when Login or sensitive Data |
@@ -179,6 +179,8 @@ Run in this order. Skip a stage only when the brief makes it pointless, and say 
 | 9 | Docs | `/docs-master` | Always: README with run, test and deploy steps |
 | 10 | Git and release | `/release-master` | Repo is not "No git" |
 | 11 | Deploy | (this master) | Go live = deploy: fresh yes, deploy, smoke-test the live URL, record the rollback command in the brief |
+
+**Design stages (3 and 4):** `design-playbook` is the supervisor for every visual and UI stage. Load it at the start of the stage alongside the stage master, follow its six gated stages (brief, direction, structure, build, verify, audit), and do not mark the stage done until its audit passes with proof (contrast numbers, screenshots at 375 and 1440 px, ticked audit).
 
 **Calling a stage master:** invoke it with the Skill tool (or its plugin name, e.g. `masters:ui-master`). If it is not installed, tell the user which master zip or plugin to install, and offer to continue that stage with the closest available skills.
 
