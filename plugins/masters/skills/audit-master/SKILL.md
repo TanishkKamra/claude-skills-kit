@@ -160,11 +160,13 @@ Run in this order. Skip a stage only when the brief makes it pointless, and say 
 | 1 | Understand the app | `/codemap-master` | Always: map, how to run and test it, hot spots |
 | 2 | Tests and break-it testing | `/debug-master` | Always; depth from Depth, no fixes yet |
 | 3 | Security and code review | `/review-master` | Always: security checklist plus bugs and over-engineering. Strix = yes: also run the `strix` CLI against a local or user-owned instance (needs Docker + an AI API key; confirm the target is theirs); its findings join the Findings table. |
-| 4 | UI and accessibility | `/ui-master` (review only) | The app has screens and Areas includes UI or Everything |
+| 4 | UI and accessibility | `/ui-master` (review only), supervised by `design-playbook` | The app has screens and Areas includes UI or Everything |
 | 5 | Production readiness | `/ops-master` | Runs is staging or production, or Why is launch |
 | 6 | Ranked fix list | (this master) | Always: merge, de-duplicate, rank by severity then effort |
 | 7 | Fix and verify | `/refactor-master` | Deliver fixes is not report only; only the fixes the user ticked |
 | 8 | Docs and release | `/docs-master` then `/release-master` | Fixes were applied: README / changelog update, branch + PR |
+
+**UI review (stage 4):** load `design-playbook` alongside `/ui-master` and run its audit stage as the review checklist (layout, spacing, type, colour and contrast, themes, components and copy, motion, anti-slop, ship-readiness). Each failed check becomes a finding with its evidence. If stage 7 fixes UI findings, re-run the playbook's verify and audit gates on the changed screens before marking them fixed.
 
 **Calling a stage master:** invoke it with the Skill tool (or its plugin name, e.g. `masters:debug-master`). If it is not installed, tell the user which master zip or plugin to install, and offer to continue that stage with the closest available skills.
 

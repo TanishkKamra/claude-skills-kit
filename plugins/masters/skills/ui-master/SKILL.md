@@ -160,6 +160,7 @@ Read `reference/playbook.md` before Phase 2 and before delegating to any child. 
 ## Child skills and routing
 | Child | Use when |
 |---|---|
+| design-playbook | Every run. Supervisor, not an aesthetic: load it first and follow its six gated stages (brief, direction, structure, build, verify, audit) alongside the chosen child; its audit must pass with proof before Done. |
 | redesign-existing-projects | Start = Redesign. Run first to audit what exists. |
 | ui-polish | Start = Polish only, or Deliver = audit then fix. Also its reference-gathering step when References = Research online. |
 | web-design-guidelines | Start = Review only, or Accessibility picked. Always the last check. |
@@ -196,6 +197,7 @@ Shown as described in the protocol (inline + the visual report page). Component 
 
 ## Child skills
 Not bundled: use the installed versions (see sources below).
+- `design-playbook`
 - `redesign-existing-projects`
 - `ui-polish`
 - `web-design-guidelines`
@@ -215,6 +217,7 @@ If a child is neither installed nor bundled, show the user its install line and 
 
 | Source | Children | Install |
 |---|---|---|
+| design-playbook plugin (Tanishk Kamra) | `design-playbook` | `/plugin marketplace add TanishkKamra/design-playbook` then `/plugin install design-playbook@design-playbook` |
 | Taste skills (Leonxlnx) | `redesign-existing-projects`, `design-taste-frontend`, `minimalist-ui`, `industrial-brutalist-ui`, `high-end-visual-design`, `stitch-design-taste`, `gpt-taste` | `/plugin marketplace add Leonxlnx/taste-skill` then `/plugin install taste-skill@taste-skill` |
 | Vercel agent skills | `web-design-guidelines` | copy `skills/web-design-guidelines` from github.com/vercel-labs/agent-skills into `~/.claude/skills/` |
 | frontend-design plugin (Anthropic marketplace) | `frontend-design` | `/plugin install frontend-design@claude-plugins-official` |
